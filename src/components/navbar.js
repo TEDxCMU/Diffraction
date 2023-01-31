@@ -22,6 +22,7 @@ function NavBar() {
                     <a className={styles.link}>About</a>
                 </Link>
                 <Link href="https://www.tedxcmu.org/">
+                    {/* TODO: change to real link later */}
                     <a target="_blank" className={cn(styles.link, styles.btn)}>
                         Purchase Tickets
                     </a>
