@@ -5,7 +5,9 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <NavBar />
-            <Component {...pageProps} />
+            <div className="grid">
+                <Component {...pageProps} />
+            </div>
         </>
     );
 }
