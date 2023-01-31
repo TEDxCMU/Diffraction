@@ -1,0 +1,70 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "lead"
+  },
+  "name": {
+    "__TYPE__": "FieldContent",
+    "value": "off",
+    "type": "Text"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "grew",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "charge",
+    "type": "Text"
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+      "width": 5616,
+      "height": 3744
+    },
+    "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+    "width": 5616,
+    "height": 3744,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "links": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "boy",
+              "type": "Text"
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

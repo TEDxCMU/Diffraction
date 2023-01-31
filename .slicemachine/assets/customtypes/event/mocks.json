@@ -1,0 +1,55 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "extra"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "tower",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "In consectetur sit tempor velit mollit mollit est duis reprehenderit amet elit fugiat anim aliqua."
+        }
+      }
+    ]
+  },
+  "speaker": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "https://prismic.io"
+    }
+  },
+  "time": {
+    "__TYPE__": "FieldContent",
+    "type": "Date",
+    "value": "2015-02-24"
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+      "width": 12288,
+      "height": 16384
+    },
+    "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+    "width": 12288,
+    "height": 16384,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  }
+}
