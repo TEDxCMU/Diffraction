@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
     --c-black: rgb(0, 0, 0);
     --c-white: rgb(255, 255, 255);
+    --t-large: 48px;
+    --t-medium: 24px;
+    --t-small: 18px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -11,15 +18,16 @@
 }
 
 html {
-    font-family: Helvetica, sans-serif;
+    font-family: Inter, Helvetica, sans-serif;
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-body, #__next {
+body,
+#__next {
     box-sizing: border-box;
-    background-color: var(--c-black);
-    color: var(--c-white);
+    background-color: var(--c-white);
+    color: var(--c-black);
 }
 
 a {
@@ -29,12 +37,20 @@ a {
     transition: opacity 0.3s;
 }
 
-a:hover {
-    opacity: 0.5;
-}
-
 @media screen and (max-width: 812px) {
     html {
         font-size: 50%;
     }
+}
+
+.heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: var(--t-large);
+}
+
+.subheading {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: var(--t-medium);
 }
