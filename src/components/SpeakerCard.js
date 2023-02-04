@@ -8,7 +8,6 @@ export default function SpeakerCard(props) {
 			<text className={styles.name}>{speaker.name}</text>
 			<text className={styles.title}>{speaker.title}</text>
 			<img className={styles.image} src={speaker.image.url}></img>
-			{/* <text className={styles.caption}>{speaker.caption}</text> */}
 		</div>
 	);
 }
