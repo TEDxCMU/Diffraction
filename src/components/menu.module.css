@@ -6,13 +6,12 @@
 .menuItems {
     display: flex !important;
     flex-direction: column;
-    align-items: center;
+    align-items: self-start;
 }
 
 .menuItems a {
     margin-right: 0 !important;
     margin-bottom: 3rem;
-    font-size: 3rem;
 }
 
 @media screen and (min-width: 812px) {
