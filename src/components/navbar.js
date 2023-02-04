@@ -1,14 +1,18 @@
+import { useRef } from 'react';
+import Menu from 'components/menu';
 import Link from 'next/link';
 import styles from 'components/navbar.module.css';
 import cn from 'classnames';
 
 function NavBar() {
+    const parentRef = useRef(null);
+    const itemsRef = useRef(null);
     return (
-        <nav className={styles.container}>
+        <nav ref={parentRef} className={styles.container}>
             <Link href="/">
                 <p className={styles.logo}>TEDxCMU</p>
             </Link>
-            <div className={styles.links}>
+            <div ref={itemsRef} className={styles.links}>
                 <Link href="/schedule">
                     <a className={styles.link}>Schedule</a>
                 </Link>
@@ -28,6 +32,7 @@ function NavBar() {
                     </a>
                 </Link>
             </div>
+            <Menu parent={parentRef} items={itemsRef} />
         </nav>
     );
 }
