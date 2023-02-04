@@ -1,0 +1,142 @@
+ .grid {
+    margin: 40px auto;
+    padding: 0;
+    width: 100%;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5%;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5%;
+    }
+    .card {
+        width: 80vw;
+        height: 80vw;
+    }
+    .image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 471px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.grid::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    color: inherit;
+    display: block;
+    border-radius: var(--space-2x);
+    border: 0.1rem solid #333333;
+    transition: border 0.3s;
+    position: relative;
+    background-color: var(--c-gray-2);
+}
+
+.card:hover, .card:focus {
+    border: 0.7px solid black;
+    background-color: var(--c-gray-2);
+    opacity: 1;
+}
+
+.cardBody {
+    padding: var(--space-6x);
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imageWrapper {
+    height: 15vw;
+    width: 30vw;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .imageWrapper {
+        height: 60vw;
+        position: relative;
+    }
+}
+
+@media (max-width: 471px) {
+    .imageWrapper {
+        height: 80vw;
+        position: relative;
+    }
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    opacity: 0.9;
+}
+
+@media (max-width: 471px) {
+    .imageWrapper > div {
+        width: 100% !important;
+    }
+    
+    .card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+    
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.name {
+    /* font-family: "PPHatton"; */
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: var(--c-black);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.tagline {
+    /* font-family: "Helvetica Neue"; */
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.3em;
+    color: var(--c-gray-3);
+    font-weight: 400;
+    padding-bottom: var(--space-2x);
+}
+
+.index {
+    /* font-family: "PPHatton"; */
+    font-weight: 500;
+    font-size: 20px;
+    float: right;
+    position: absolute;
+    bottom: var(--space-6x);
+    right: var(--space-6x);
+}

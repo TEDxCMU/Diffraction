@@ -1,0 +1,38 @@
+.container {
+    margin: 5.0rem auto;
+    min-width: 100rem;
+}
+
+.sidebarContainer {
+    margin: 3rem;
+}
+
+.header {
+    margin-bottom: 2.4rem;
+    font-size: 4.0rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--c-black);
+    opacity: 90%;
+}
+
+.description {
+    margin-bottom: 2.4rem;
+    font-size: 1.5rem;
+    color: var(--c-black);
+    opacity: 90%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: 100px;
+  }
+
+
+@media screen and (max-width: 812px) {
+    .container {
+        margin: 3rem;
+    }
+}

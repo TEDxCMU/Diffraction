@@ -6,6 +6,25 @@
     --t-large: 48px;
     --t-medium: 24px;
     --t-small: 18px;
+
+    --c-black: rgb(0, 0, 0);
+    --c-white: rgb(255, 255, 255);
+    --c-off-white: #C4C4C4;
+    --c-off-white-2: #E5E5E6;
+    --c-gray: #474747;
+    --c-gray-2: #cecece;
+    --c-gray-3: #828282;
+    --c-off-black: #020202;
+
+    --space: 4px;
+    --space-2x: 8px;
+    --space-3x: 12px;
+    --space-4x: 16px;
+    --space-6x: 24px;
+    --space-8x: 32px;
+    --space-12x: 48px;
+    --space-16x: 64px;
+    --space-32x: 128px;
 }
 
 *,
@@ -57,7 +76,7 @@ a {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(75px, max-content));
     align-items: flex-start;
     grid-column-gap: 10px;
     margin: 0 36px;

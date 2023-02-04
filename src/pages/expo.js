@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getInnovators } from 'utils/content';
+import ExpoComp from 'components/expo';
 
 function InnovationExpo() {
     const [data, setData] = useState(null);
@@ -10,11 +11,13 @@ function InnovationExpo() {
 
     async function init() {
         const content = await getInnovators();
+        const innovators = content.map(({ data }) => data);
+        console.log(innovators);
         setData(content);
     }
 
     return (
-        <div>InnovationExpo</div>
+        <ExpoComp />
     );
 }
 
