@@ -47,6 +47,7 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     font-size: var(--t-large);
+    margin-top: 1%; 
 }
 
 .subheading {
@@ -55,10 +56,36 @@ a {
     font-size: var(--t-medium);
 }
 
+.name{
+    font-weight: bold; 
+}
+
+.topLine {
+    display: flex; 
+    align-items: center;
+}
+
+.child {
+    margin-left: auto;
+    order: 2;
+}
+
+.info {
+    margin-top: 2%; 
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: flex-start;
     grid-column-gap: 10px;
     margin: 0 36px;
+}
+
+.container {
+    background-color: lightgray; 
+    grid-column: span 12; 
+    grid-row: span 2; 
+    padding: 2%; 
+    margin: 1% 0 1% 0; 
 }

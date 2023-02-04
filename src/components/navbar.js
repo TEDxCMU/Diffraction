@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from 'components/navbar.module.css';
-import cn from 'classnames';
+//import cn from 'classnames';
 
 function NavBar() {
     return (
@@ -21,12 +21,12 @@ function NavBar() {
                 <Link href="/about">
                     <a className={styles.link}>About</a>
                 </Link>
-                <Link href="https://www.tedxcmu.org/">
-                    {/* TODO: change to real link later */}
+                {/*<Link href="https://www.tedxcmu.org/">
+
                     <a target="_blank" className={cn(styles.link, styles.btn)}>
                         Purchase Tickets
-                    </a>
-                </Link>
+    </a>
+    </Link>*/}
             </div>
         </nav>
     );
