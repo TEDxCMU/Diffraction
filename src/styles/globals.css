@@ -52,6 +52,7 @@ a {
 .headingFull {
 	grid-column: span 12;
 	font-weight: 600;
+	margin: 0.5em;
 	text-transform: uppercase;
 	font-size: var(--t-large);
 }

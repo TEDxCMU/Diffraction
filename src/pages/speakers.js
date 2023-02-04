@@ -23,7 +23,7 @@ function Speakers() {
 			{loading ? (
 				<text>Loading</text>
 			) : (
-				data.map((item) => <SpeakerCard speaker={item} />)
+				data.map((item, id) => <SpeakerCard key={id} speaker={item} />)
 			)}
 		</>
 	);
