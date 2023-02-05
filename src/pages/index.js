@@ -10,6 +10,9 @@ function Home() {
           <p className="heading">DATE + TIME</p>
         </div>
       </div>
+      <div className={styles.talks}>
+        <p className="subheading">TALKS</p>
+      </div>
     </div>
   );
 }
