@@ -80,7 +80,7 @@ a {
     grid-column: span 12; 
     grid-row: span 2; 
     padding: 5%; 
-    margin: 2% 0 0 2%
+    margin: 2% 0 2% 0
 }
 
 .child {

@@ -4,7 +4,6 @@ import { getSchedule } from 'utils/content';
 function Schedule() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false); 
-    console.log(data)
 
     useEffect(() => {
         init();
@@ -13,7 +12,6 @@ function Schedule() {
     async function init() {
         const content = await getSchedule();
         const events = content.map(({ data }) => data);
-        console.log(events); 
         setData(events);
         setLoading(false); 
     }
