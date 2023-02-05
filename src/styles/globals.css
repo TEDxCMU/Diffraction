@@ -47,7 +47,6 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     font-size: var(--t-large);
-    margin-top: 1%; 
 }
 
 .subheading {
@@ -57,21 +56,15 @@ a {
 }
 
 .name{
-    font-weight: bold; 
+    font-weight: bold
 }
 
 .topLine {
     display: flex; 
-    align-items: center;
-}
-
-.child {
-    margin-left: auto;
-    order: 2;
 }
 
 .info {
-    margin-top: 2%; 
+    margin: 5% 0 5% 0;
 }
 
 .grid {
@@ -86,6 +79,11 @@ a {
     background-color: lightgray; 
     grid-column: span 12; 
     grid-row: span 2; 
-    padding: 2%; 
-    margin: 1% 0 1% 0; 
+    padding: 5%; 
+    margin: 2% 0 0 2%
+}
+
+.child {
+    margin-left: auto;
+    order:2; 
 }

@@ -4,7 +4,6 @@ import { getSchedule } from 'utils/content';
 function Schedule() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false); 
-    const info = [{name: "Loading"}, {name: "Loading"}]
     console.log(data)
 
     useEffect(() => {
@@ -30,6 +29,7 @@ function Schedule() {
                 speaker = {talks.speaker}
                 description = {talks.description}
                 time = {talks.time}
+                image = {talks.image}
                 />
             }))}
 
@@ -48,6 +48,7 @@ function Talks(props){
             <div className = "info">
                 <p>{props.description[0].text}</p>
             </div>
+            <img width = "25%" src = {props.image.url}></img>
         </div>
 
     ); 
