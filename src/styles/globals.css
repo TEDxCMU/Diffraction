@@ -71,3 +71,10 @@ a {
 	margin: 0 36px;
 	min-width: 500px;
 }
+
+@media (max-width: 844px) {
+	.grid {
+		margin: 0;
+		padding: 20px;
+	}
+}
