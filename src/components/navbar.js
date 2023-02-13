@@ -21,6 +21,9 @@ function NavBar() {
                 <Link legacyBehavior href="/about">
                     <a className={styles.link}>About</a>
                 </Link>
+                <Link legacyBehavior href="/gradient">
+                    <a className={styles.link}>Gradient Exploration (temp)</a>
+                </Link>
                 <Link legacyBehavior href="https://www.tedxcmu.org/">
                     {/* TODO: change to real link later */}
                     {/* <a target="_blank" className={cn(styles.link, styles.btn)}>
