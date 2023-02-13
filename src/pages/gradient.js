@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import React, { useRef, Suspense } from 'react';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
-import { shaderMaterial } from '@react-three/drei';
+import { shaderMaterial, OrbitControls } from '@react-three/drei';
 import vertShader from '../shader/vertex.glsl';
 import fragShader from '../shader/fragment.glsl';
 
@@ -27,18 +27,19 @@ const GradientEffect = () => {
 
   return (
     <mesh>
-      <planeBufferGeometry args={[0.4, 0.6, 16, 16]}/>
-      <gradientMaterial uColor={"hotpink"} ref={ref} wireframe />
+      <sphereBufferGeometry args={[1.5, 32, 32]}/>
+      <gradientMaterial uColor={"lightblue"} ref={ref} side={THREE.DoubleSide}/>
     </mesh>
   );
 }
 
 const Scene = () => {
   return (
-    <Canvas camera={{ fov: 10 }}>
+    <Canvas camera={{ position: [0, 0, 1.3], fov: 10 }}>
       <Suspense fallback={null}>
         <GradientEffect />
       </Suspense>
+      <OrbitControls />
     </Canvas>
   );
 }
