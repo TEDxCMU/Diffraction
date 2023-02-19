@@ -3,9 +3,7 @@ precision mediump float;
 varying vec2 vUv;
 varying vec3 vPosition;
 uniform float uTime;
-uniform vec2 uMouse;
-
-varying float dist;
+uniform vec3 uMouse;
 
 #pragma glslify: snoise3 = require(glsl-noise/simplex/3d);
 
@@ -19,7 +17,7 @@ void main() {
 
   vUv = uv;
   vPosition = pos;
-  dist = distance(pos.xy, uMouse);
+  // dist = length(vPosition - uMouse);
   
   gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );
 }

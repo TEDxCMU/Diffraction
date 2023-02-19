@@ -4,13 +4,14 @@ import { Canvas, extend, useFrame, useThree } from '@react-three/fiber';
 import { shaderMaterial, OrbitControls } from '@react-three/drei';
 import vertShader from '../shader/vertex.glsl';
 import fragShader from '../shader/fragment.glsl';
+import { DodecahedronGeometry } from 'three';
 
 const GradientMaterial = shaderMaterial(
   // Uniform
   {
     uTime: 0,
     uColor: new THREE.Color(0.0, 0.0, 0.0),
-    uMouse: new THREE.Vector2(0.0, 0.0)
+    uMouse: new THREE.Vector3(0.0, 0.0, 0.0)
   },
   vertShader,
   fragShader
@@ -32,13 +33,16 @@ const GradientEffect = () => {
       ref.current.uMouse = intersections[0].point;
     }
 
-    console.log(`position: ${camera.position.x}, ${camera.position.y}, ${camera.position.z}`);
-    console.log(`rotation: ${camera.rotation.x}, ${camera.rotation.y}, ${camera.rotation.z}`);
-  })
+    // camera.rotateX(0.001);
+    // camera.rotateY(0.001);
+    // camera.rotateZ(0.001);
+
+  });
 
   return (
     <mesh>
-      <sphereBufferGeometry args={[1.5, 32, 32]}/>
+      <sphereBufferGeometry args={[1.5, 64, 32]}/>
+      {/* <planeBufferGeometry args={[5, 5, 32, 32]}/> */}
       <gradientMaterial uColor={"lightblue"} 
                         ref={ref} 
                         side={THREE.DoubleSide}
@@ -49,11 +53,15 @@ const GradientEffect = () => {
 
 const Scene = () => {
   return (
-    <Canvas camera={{ position: [0.1, 0.5, 0.1] }}>
+    <Canvas camera={{ position: [0, 0, 0.13], fov: 20}}>
       <Suspense fallback={null}>
         <GradientEffect />
+        {/* <mesh>
+          <dodecahedronGeometry args={[1,0]} position={[0,0,-0.15]} />
+          <meshPhysicalMaterial clearcoat={1} clearcoatRoughness={0} transmission={1} thickness={0.9} roughness={0} toneMapped={false} />
+        </mesh> */}
       </Suspense>
-      {/* <OrbitControls /> */}
+      <OrbitControls />
     </Canvas>
   );
 }
