@@ -26,8 +26,11 @@ html {
 body,
 #__next {
     box-sizing: border-box;
-    background-color: var(--c-white);
-    color: var(--c-black);
+    color: var(--c-white);
+    background: 
+    radial-gradient(ellipse at center, #8500c3, transparent),
+    radial-gradient(ellipse at top, #e66465, transparent), 
+    radial-gradient(ellipse at bottom, #000000, transparent);  ;
 }
 
 a {
@@ -78,8 +81,12 @@ a {
 
 .container {
     display: flex; 
-    background-color: lightgray; 
+    background-color: rgba(0,0,0,0.3); 
     border-radius: 5px; 
+    border-style: solid;
+    border-color: white;
+    border-width: 1px; 
+    margin-top: 1%; 
 }
 
 .left{
