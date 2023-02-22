@@ -18,14 +18,16 @@ function Schedule() {
 
     return (
         <> <div className = "heading">Schedule</div>
+
             {loading ?  
             <p> Loading</p>
             :( data?.map((talks, idx)=>{
+                console.log(Object.values(talks.description)[0].text)
                 return <Talks
                 key = {idx}
                 title = {talks.title}
                 speaker = {talks.speaker}
-                description = {talks.description}
+                description = {Object.values(talks.description)[0].text}
                 time = {talks.time}
                 image = {talks.image}
                 />
@@ -36,18 +38,51 @@ function Schedule() {
 }
 
 function Talks(props){
-    return(
-        <div className = "container">
-            <div className = "topLine">
-                <h2 className = "subheading">{props.title}</h2>
-                <p className = "child"> {props.time}</p>
+    const [isMobile, setIsMobile] = useState(false)
+
+    const handleResize = () => {
+        if (window.innerWidth < 812) {
+            setIsMobile(true)
+        } else {
+            setIsMobile(false)
+        }
+    }
+    useEffect(() => {
+        window.addEventListener("resize", handleResize)
+    })
+
+    return(      
+        ! isMobile ? (
+        <div className = "card">
+            <p> {props.time} </p>
+            <div className = "container">
+                <div className = "left">
+                    <h2 className = "subheading">{props.title}</h2>
+                    <p className>{props.speaker.uid}</p>
+                    <p className = "description">{props.description}</p>
+                    
+                </div>
+                <div className = "right">
+                    <img width = "100%" src = {props.image.url}></img>
+                </div>
             </div>
-                <p className>{props.speaker.uid}</p>
-            <div className = "info">
-                <p>{props.description[0].text}</p>
-            </div>
-            <img width = "25%" src = {props.image.url}></img>
         </div>
+        ) : (
+            <div className = "card">
+                <div className = "container">
+                    <div className = "left">
+                        <h2 className = "subheading">{props.title}</h2>
+                        <p className>{props.speaker.uid}</p>
+                        <p className = "description">{props.description}</p>   
+                    </div>
+                    <div className = "right">
+                        <p> {props.time} </p>
+                    </div>
+                </div>
+            </div>
+        )
+        
+        
 
     ); 
 }
