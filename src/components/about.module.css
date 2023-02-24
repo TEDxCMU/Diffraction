@@ -1,0 +1,18 @@
+.left,
+.img {
+    padding: 6rem 5rem;
+}
+
+.left {
+    padding: 7rem 6rem;
+    width: 55rem;
+    border-right: 1px solid var(--c-border);
+}
+
+.body {
+    font-size: var(--t-xsmall);
+}
+
+.header {
+    font-size: var(--t-large);
+}
