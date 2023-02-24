@@ -1,44 +1,44 @@
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem 36px;
-  font-family: Inter, 'Helvetica Neue';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 36px;
+    font-family: Inter, "Helvetica Neue";
 }
 
 .logo {
-  font-size: var(--t-small);
-  font-weight: 600;
+    font-size: var(--t-small);
+    font-weight: 600;
 }
 
 .logo:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .links {
-  text-transform: capitalize;
+    text-transform: capitalize;
 }
 
 .link,
 .logo {
-  font-size: var(--t-small);
+    font-size: var(--t-small);
 }
 
 .link:not(:last-child) {
-  margin-right: 7rem;
+    margin-right: 7rem;
 }
 
 .btn {
-  background-color: var(--c-black);
-  color: var(--c-white);
-  border-radius: 6px;
-  font-weight: bold;
-  border: 1px solid black;
-  padding: 12px;
-  transition: background-color 0.6s;
+    background-color: var(--c-black);
+    color: var(--c-white);
+    border-radius: 6px;
+    font-weight: bold;
+    border: 1px solid var(--c-white);
+    padding: 12px;
+    transition: background-color 0.6s;
 }
 
 .btn:hover {
-  background-color: var(--c-white);
-  color: var(--c-black);
+    background-color: var(--c-white);
+    color: var(--c-black);
 }
