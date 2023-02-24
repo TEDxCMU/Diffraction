@@ -41,6 +41,9 @@ a {
     }
 }
 
+.title {
+    font-family: Void, Bugrino, Inter, "Helvetica Neue";
+}
 .heading {
     font-weight: 600;
     text-transform: uppercase;
