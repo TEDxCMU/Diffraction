@@ -6,8 +6,8 @@ function Home() {
             <div className={styles.headerContainer}>
                 <div className={styles.eventInfo}>
                     <h1 className="largeTitle">diffraction</h1>
-                    <p className="heading">Simmons Auditorium</p>
-                    <p className="heading">March 25, 7 pm EST</p>
+                    <p className="heading medium-large">Simmons Auditorium</p>
+                    <p className="heading medium-large">March 25, 7 pm EST</p>
                 </div>
             </div>
             <div className={styles.talks}>

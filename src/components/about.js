@@ -1,7 +1,10 @@
 import cn from "classnames";
+import { Link } from "next/link";
 
 import styles from "./about.module.css";
 import Modal from "./modal";
+import Twitter from "../assets/twitter.svg";
+import Linkedin from "../assets/linkedin.svg";
 
 export default function About({ active, setActive }) {
     return (
@@ -28,6 +31,31 @@ export default function About({ active, setActive }) {
                     innovative ideas and perspectives. We realize their voice
                     can have an impact.
                 </p>
+                <div className={styles.links}>
+                    <a
+                        className={styles.button}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.tedxcmu.org"
+                    >
+                        TEDxCMU.ORG
+                    </a>
+                    <a
+                        className={styles.icon}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://twitter.com/tedxcmu"
+                    >
+                        <Twitter />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/company/tedxcmu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Linkedin />
+                    </a>
+                </div>
             </div>
             <img
                 className={styles.img}
