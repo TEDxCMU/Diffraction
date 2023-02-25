@@ -5,6 +5,7 @@ import { shaderMaterial, OrbitControls } from '@react-three/drei';
 import vertShader from '../shader/vertex.glsl';
 import fragShader from '../shader/fragment.glsl';
 import { DodecahedronGeometry } from 'three';
+import { ChromaticAberration, EffectComposer, HueSaturation, TiltShift } from '@react-three/postprocessing';
 
 const GradientMaterial = shaderMaterial(
   // Uniform
@@ -62,6 +63,9 @@ const Scene = () => {
         </mesh> */}
       </Suspense>
       <OrbitControls />
+      <EffectComposer disableNormalPass>
+        
+      </EffectComposer>
     </Canvas>
   );
 }
