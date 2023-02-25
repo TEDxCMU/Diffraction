@@ -1,20 +1,24 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import styles from "components/navbar.module.css";
 import cn from "classnames";
+
+import Menu from "components/menu";
 import About from "components/about";
 
 function NavBar() {
+    const parentRef = useRef(null);
+    const itemsRef = useRef(null);
     const [about, setAbout] = useState(false);
 
     return (
         <>
             <About active={about} setActive={setAbout} />
-            <nav className={styles.container}>
+            <nav ref={parentRef} className={styles.container}>
                 <Link href="/">
                     <p className={styles.logo}>TEDxCMU</p>
                 </Link>
-                <div className={styles.links}>
+                <div ref={itemsRef} className={styles.links}>
                     <Link href="/schedule">
                         <a className={styles.link}>Schedule</a>
                     </Link>
@@ -37,6 +41,7 @@ function NavBar() {
                         </a>
                     </Link>
                 </div>
+                <Menu parent={parentRef} items={itemsRef} />
             </nav>
         </>
     );
