@@ -26,16 +26,6 @@ export default function SpeakerCard(props) {
                         About {speaker.name}
                     </h1>
                     <p className={styles.body}>{speaker.description}</p>
-                    <div className={styles.links}>
-                        <a
-                            className={styles.button}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://www.tedxcmu.org"
-                        >
-                            TEDxCMU.ORG
-                        </a>
-                    </div>
                 </div>
                 <img
                     className={styles.modalImage}

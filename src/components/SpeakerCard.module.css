@@ -91,23 +91,7 @@
 
 .header {
     font-size: var(--t-large);
-}
-
-.links {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    font-size: var(--t-large);
-}
-
-.button {
-    display: inline-block;
-    margin-right: 2rem;
-    padding: 1.5rem 3.5rem;
-    font-size: 1.2rem;
-    border: 0.1rem solid var(--c-white);
-    border-radius: 2.5rem;
-    color: var(--c-white);
+    padding-bottom: 20px;
 }
 
 .icon {
