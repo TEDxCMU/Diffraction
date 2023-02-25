@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { getSchedule } from 'utils/content';
+import { useState, useEffect } from "react";
+import { getSchedule } from "utils/content";
 
 function Schedule() {
     const [data, setData] = useState([]);

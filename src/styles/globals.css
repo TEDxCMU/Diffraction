@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
     --c-black: rgb(0, 0, 0);
     --c-white: rgb(255, 255, 255);
+    --c-border: #4f4f4f;
+    --t-title--large: 96px;
+    --t-title: 64px;
     --t-large: 48px;
+    --t-medium-large: 40px;
     --t-medium: 24px;
     --t-small: 18px;
+    --t-xsmall: 14px;
+    --grid-margin: 36px;
 }
 
 *,
@@ -18,7 +22,7 @@
 }
 
 html {
-    font-family: Inter, Helvetica, sans-serif;
+    font-family: Satoshi, Inter, Helvetica, sans-serif;
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
@@ -44,6 +48,7 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     font-size: var(--t-large);
+    font-family: Bugrino, Inter, "Helvetica Neue";
 }
 
 .subheading {
