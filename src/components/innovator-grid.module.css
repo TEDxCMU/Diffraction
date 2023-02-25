@@ -18,21 +18,23 @@
         height: 80vw;
     }
     .image {
-        height: 100%;
-        width: 100%;
         object-fit: cover;
     }
 }
 
 @media (max-width: 471px) {
-    .grid {
-        display: flex;
-        flex-direction: column;
+    .card {
+        width: 80vw;
+        height: 80vw;
     }
     .image {
-        height: 100%;
-        width: 100%;
         object-fit: cover;
+    }
+    
+    .cardBody {
+        padding: var(--space-6x);
+        color: var(--secondary-color);
+        display: relative;
     }
 }
 
@@ -43,7 +45,6 @@
 .card {
     color: inherit;
     display: block;
-    border-radius: var(--space-2x);
     border: 0.1rem solid #333333;
     transition: border 0.3s;
     position: relative;
@@ -88,26 +89,36 @@
     height: 100%;
     width: 100%;
     object-fit: scale-down;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    /* border-top-left-radius: 6px; */
+    /* border-top-right-radius: 6px; */
     opacity: 0.9;
 }
 
-@media (max-width: 471px) {
+@media (max-width: 490px) {
     .imageWrapper > div {
         width: 100% !important;
     }
+
+    .image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
     
     .card {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 24px;
+        width: 190vw;
+        height: 190vw;
+    }
+
+    .name {
+        position: absolute;
+        bottom: 58px;
+    }
+    .tagline {
+        position: absolute;
+        bottom: 20px;
     }
     
-    .grid {
-        display: flex;
-        flex-direction: column;
-    }
 }
 
 .name {
