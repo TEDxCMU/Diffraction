@@ -1,20 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
     --c-black: rgb(0, 0, 0);
     --c-white: rgb(255, 255, 255);
-    --t-large: 48px;
-    --t-medium: 24px;
-    --t-small: 18px;
-
-    --c-black: rgb(0, 0, 0);
-    --c-white: rgb(255, 255, 255);
-    --c-off-white: #C4C4C4;
-    --c-off-white-2: #E5E5E6;
+    --c-border: #4f4f4f;
+    --c-off-white: #c4c4c4;
+    --c-off-white-2: #e5e5e6;
     --c-gray: #474747;
     --c-gray-2: #cecece;
     --c-gray-3: #828282;
     --c-off-black: #020202;
+
+    --t-title--large: 96px;
+    --t-title: 64px;
+    --t-large: 48px;
+    --t-medium-large: 40px;
+    --t-medium: 24px;
+    --t-small: 18px;
+    --t-xsmall: 14px;
+
+    --grid-margin: 36px;
 
     --space: 4px;
     --space-2x: 8px;
@@ -37,7 +40,7 @@
 }
 
 html {
-    font-family: Inter, Helvetica, sans-serif;
+    font-family: Satoshi, Inter, Helvetica, sans-serif;
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
@@ -45,8 +48,8 @@ html {
 body,
 #__next {
     box-sizing: border-box;
-    background-color: var(--c-white);
-    color: var(--c-black);
+    background-color: var(--c-black);
+    color: var(--c-white);
 }
 
 a {
@@ -62,10 +65,22 @@ a {
     }
 }
 
+.largeTitle {
+    font-family: Void, Bugrino, Inter, "Helvetica Neue";
+    font-size: var(--t-title--large);
+}
+
+.title {
+    font-family: Void, Bugrino, Inter, "Helvetica Neue";
+    text-transform: uppercase;
+    font-size: var(--t-title);
+}
+
 .heading {
     font-weight: 600;
     text-transform: uppercase;
     font-size: var(--t-large);
+    font-family: Bugrino, Inter, "Helvetica Neue";
 }
 
 .subheading {
@@ -79,5 +94,9 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(75px, max-content));
     align-items: flex-start;
     grid-column-gap: 10px;
-    margin: 0 36px;
+    margin: 0 var(--grid-margin);
+}
+
+.medium-large {
+    font-size: var(--t-medium-large);
 }

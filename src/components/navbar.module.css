@@ -1,8 +1,13 @@
+.link:hover {
+    cursor: pointer;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem 36px;
+    font-family: Inter, "Helvetica Neue";
 }
 
 .logo {
@@ -32,7 +37,7 @@
     color: var(--c-white);
     border-radius: 6px;
     font-weight: bold;
-    border: 1px solid black;
+    border: 1px solid var(--c-white);
     padding: 12px;
     transition: background-color 0.6s;
 }

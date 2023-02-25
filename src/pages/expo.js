@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { getInnovators } from 'utils/content';
-import ExpoComp from 'components/expo';
+import { useState, useEffect } from "react";
+import { getInnovators } from "utils/content";
+import ExpoComp from "components/expo";
 
 function InnovationExpo() {
     const [data, setData] = useState(null);
@@ -16,9 +16,7 @@ function InnovationExpo() {
         setData(content);
     }
 
-    return (
-        <ExpoComp />
-    );
+    return <ExpoComp />;
 }
 
 export default InnovationExpo;
