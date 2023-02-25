@@ -21,17 +21,17 @@ function Speakers() {
 
 	return (
 		<>
-			{/* <div>
-				<div className="grid"> */}
-			<text className={styles.headingFull}>Speakers</text>
-			<text className={styles.description}>a short description</text>
-			{loading ? (
-				<text>Loading</text>
-			) : (
-				data.map((item, id) => <SpeakerCard key={id} speaker={item} />)
-			)}
-			{/* </div>
-			</div> */}
+			<div className={styles.bg}>
+				<div className="grid">
+					<text className={styles.headingFull}>Speakers</text>
+					<text className={styles.description}>a short description</text>
+					{loading ? (
+						<text>Loading</text>
+					) : (
+						data.map((item, id) => <SpeakerCard key={id} speaker={item} />)
+					)}
+				</div>
+			</div>
 		</>
 	);
 }
