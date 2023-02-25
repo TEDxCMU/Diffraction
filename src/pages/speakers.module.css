@@ -1,34 +1,37 @@
 .description {
-	grid-column: span 12;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: var(--t-small);
-	margin: 0 36px 80px;
+    display: block;
+    grid-column: span 12;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: var(--t-small);
+    margin: 0 36px 80px;
 }
 
 @media (max-width: 844px) {
-	.grid {
-		margin: 0;
-		padding: 20px;
-	}
+    .grid {
+        margin: 0;
+        padding: 20px;
+    }
 }
 
 .headingFull {
-	grid-column: span 12;
-	font-weight: 600;
-	margin: 80px 36px 0px 36px;
-	text-transform: uppercase;
-	font-size: var(--t-large);
+    display: inline-block;
+    font-weight: 600;
+    /* margin: 80px 36px 0px 36px; */
+    padding: 80px 36px 0px 36px;
+    text-transform: uppercase;
+    font-size: var(--t-large);
+    font-family: Bugrino, Inter, "Helvetica Neue";
 }
 
 .bg {
-	background-image: url('../assets/speaker_bg.png');
+    background-image: url("../assets/speaker_bg.png");
 
-	/* Full height */
-	height: 80%;
+    /* Full height */
+    width: 100%;
 
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

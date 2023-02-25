@@ -7,7 +7,6 @@ import styles from "./speakers.module.css";
 function Speakers() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
         init();
     }, []);
@@ -22,11 +21,9 @@ function Speakers() {
     return (
         <>
             <div className={styles.bg}>
+                <text className={styles.headingFull}>Speakers</text>
+                <text className={styles.description}>a short description</text>
                 <div className="grid">
-                    <text className={styles.headingFull}>Speakers</text>
-                    <text className={styles.description}>
-                        a short description
-                    </text>
                     {loading ? (
                         <text>Loading</text>
                     ) : (
