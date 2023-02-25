@@ -112,7 +112,7 @@ export const WaterTexture = (props) => {
   )
 }
 
-class WaterEffectImpl extends Effect {
+export class WaterEffectImpl extends Effect {
   constructor(texture, mouse) {
     super("WaterEffect", fragment, {
       uniforms: new Map([["uTexture", new THREE.Uniform(texture)]])
@@ -120,14 +120,7 @@ class WaterEffectImpl extends Effect {
   }
 }
 
-export const WaterEffect = forwardRef(({ texture }, ref) => {
-  // texture = new THREE.Texture(WaterTexture)
-  // texture = useTexture("/test-texture.jpg")
-  const effect = useMemo(() => new WaterEffectImpl(texture, ref), [texture])
-  return <primitive ref={ref} object={effect} />
-})
-
-const fragment2 = `
+const fragment = `
 //uniform vec2 uMouse;
 
 void mainUv(inout vec2 uv) {
@@ -175,7 +168,7 @@ const fragment3 = `
     }
 `
 
-const fragment = `
+const fragment2 = `
 uniform sampler2D uTexture;
 
 void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor) {
