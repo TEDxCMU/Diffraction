@@ -4,6 +4,7 @@ import { Canvas, extend, useFrame, useThree } from '@react-three/fiber';
 import { shaderMaterial, OrbitControls } from '@react-three/drei';
 import vertShader from '../shader/vertex.glsl';
 import fragShader from '../shader/fragment.glsl';
+import { WaterEffect } from '../shader/waterShader'
 import { DodecahedronGeometry } from 'three';
 import { ChromaticAberration, EffectComposer, HueSaturation, TiltShift } from '@react-three/postprocessing';
 
@@ -34,10 +35,6 @@ const GradientEffect = () => {
       ref.current.uMouse = intersections[0].point;
     }
 
-    // camera.rotateX(0.001);
-    // camera.rotateY(0.001);
-    // camera.rotateZ(0.001);
-
   });
 
   return (
@@ -53,27 +50,26 @@ const GradientEffect = () => {
 }
 
 const Scene = () => {
+  const ref = useRef()
   return (
-    <Canvas camera={{ position: [0, 0, 0.13], fov: 20}}>
-      <Suspense fallback={null}>
-        <GradientEffect />
-        {/* <mesh>
-          <dodecahedronGeometry args={[1,0]} position={[0,0,-0.15]} />
-          <meshPhysicalMaterial clearcoat={1} clearcoatRoughness={0} transmission={1} thickness={0.9} roughness={0} toneMapped={false} />
-        </mesh> */}
-      </Suspense>
+    <>
+      <GradientEffect />
       <OrbitControls />
-      <EffectComposer disableNormalPass>
-        
+      <EffectComposer >
+        <WaterEffect  ref={ref}/>
       </EffectComposer>
-    </Canvas>
+    </>
   );
 }
 
 function Gradient() {
   return (
   <div style={{ position:"absolute", left:0, width: "100vw", height: "100vh" }}>
-    <Scene />
+    <Canvas camera={{ position: [0, 0, 0.13], fov: 20}}>
+      <Suspense fallback={null}>
+        <Scene />
+      </Suspense>
+    </Canvas>
   </div>
   );
 }
