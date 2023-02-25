@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { getSpeakers } from 'utils/content';
 import SpeakerCard from 'components/SpeakerCard';
 
+import styles from './speakers.module.css';
+
 function Speakers() {
 	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
@@ -19,12 +21,17 @@ function Speakers() {
 
 	return (
 		<>
-			<text className="headingFull">Speakers</text>
+			{/* <div>
+				<div className="grid"> */}
+			<text className={styles.headingFull}>Speakers</text>
+			<text className={styles.description}>a short description</text>
 			{loading ? (
 				<text>Loading</text>
 			) : (
 				data.map((item, id) => <SpeakerCard key={id} speaker={item} />)
 			)}
+			{/* </div>
+			</div> */}
 		</>
 	);
 }

@@ -26,8 +26,8 @@ html {
 body,
 #__next {
 	box-sizing: border-box;
-	background-color: var(--c-white);
-	color: var(--c-black);
+	background-color: var(--c-black);
+	color: var(--c-white);
 }
 
 a {
@@ -49,14 +49,6 @@ a {
 	font-size: var(--t-large);
 }
 
-.headingFull {
-	grid-column: span 12;
-	font-weight: 600;
-	margin: 0.5em;
-	text-transform: uppercase;
-	font-size: var(--t-large);
-}
-
 .subheading {
 	font-weight: bold;
 	text-transform: uppercase;
@@ -70,11 +62,4 @@ a {
 	grid-column-gap: 10px;
 	margin: 0 36px;
 	min-width: 500px;
-}
-
-@media (max-width: 844px) {
-	.grid {
-		margin: 0;
-		padding: 20px;
-	}
 }
