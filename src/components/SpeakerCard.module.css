@@ -2,7 +2,7 @@
 	background: rgba(0, 0, 0, 0.6);
 	grid-column: span 4;
 	margin: 1em;
-	height: 350px;
+	height: 400px;
 	position: relative;
 	border-radius: 6px;
 	border-color: white;
@@ -11,22 +11,18 @@
 }
 
 .name {
-	position: absolute;
-	left: 7.3%;
-	top: 62%;
-	bottom: 22.1%;
-
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 700;
 	font-size: 28px;
+	margin: 20px;
 }
 
 .caption {
-	position: absolute;
+	/* position: absolute;
 	left: 7.3%;
 	top: 75%;
-	bottom: 12.95%;
+	bottom: 12.95%; */
 
 	font-family: 'Inter';
 	font-style: normal;
@@ -35,20 +31,18 @@
 }
 
 .title {
-	position: absolute;
-	left: 7.3%;
-	top: 75%;
-	bottom: 12.95%;
-
+	display: block;
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
+	margin: 15px 20px;
 }
 
 .image {
 	width: 100%;
-	height: 100%;
+	height: 65%;
+	object-fit: cover;
 }
 
 @media (max-width: 844px) {
@@ -59,5 +53,14 @@
 
 .info {
 	height: 30%;
-	border-width: 2px;
+	border-top: 2px solid white;
+	padding: 20px;
+}
+
+.number {
+	font-size: 40px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 20px;
 }

@@ -9,6 +9,7 @@ export default function SpeakerCard(props) {
 			<div className={styles.info}>
 				<text className={styles.name}>{speaker.name}</text>
 				<text className={styles.title}>{speaker.title}</text>
+				<text className={styles.number}>1</text>
 			</div>
 		</div>
 	);
