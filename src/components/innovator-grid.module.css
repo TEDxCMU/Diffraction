@@ -1,4 +1,4 @@
- .grid {
+.grid {
     margin: 40px auto;
     padding: 0;
     width: 100%;
@@ -44,15 +44,16 @@
     color: inherit;
     display: block;
     border-radius: var(--space-2x);
-    border: 0.1rem solid #333333;
+    border: 1px solid var(--c-white);
     transition: border 0.3s;
     position: relative;
-    background-color: var(--c-gray-2);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.card:hover, .card:focus {
-    border: 0.7px solid black;
-    background-color: var(--c-gray-2);
+.card:hover,
+.card:focus {
+    border: 1px solid var(--c-white);
+    background-color: rgba(0, 0, 0, 0.6);
     opacity: 1;
 }
 
@@ -62,6 +63,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-top: 1px solid var(--c-white);
 }
 
 .imageWrapper {
@@ -97,13 +99,13 @@
     .imageWrapper > div {
         width: 100% !important;
     }
-    
+
     .card {
         width: 100%;
         margin-right: 0;
         margin-bottom: 24px;
     }
-    
+
     .grid {
         display: flex;
         flex-direction: column;
@@ -111,10 +113,10 @@
 }
 
 .name {
-    /* font-family: "PPHatton"; */
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    color: var(--c-black);
+    font-family: "Bugrino", Inter, "Helvetica Neue";
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: var(--c-white);
     font-size: 24px;
     font-weight: 600;
     margin: 0;
@@ -126,7 +128,7 @@
     font-size: 20px;
     margin: 0;
     line-height: 1.3em;
-    color: var(--c-gray-3);
+    color: var(--c-gray-4);
     font-weight: 400;
     padding-bottom: var(--space-2x);
 }

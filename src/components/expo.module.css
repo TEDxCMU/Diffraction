@@ -1,5 +1,5 @@
 .container {
-    margin: 5.0rem auto;
+    margin: 5rem auto;
     min-width: 100rem;
 }
 
@@ -9,17 +9,18 @@
 
 .header {
     margin-bottom: 2.4rem;
-    font-size: 4.0rem;
+    font-size: 4rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--c-black);
+    color: var(--c-white);
     opacity: 90%;
+    font-family: Void, Inter, "Helvetica Neue";
 }
 
 .description {
     margin-bottom: 2.4rem;
     font-size: 1.5rem;
-    color: var(--c-black);
+    color: var(--c-white);
     opacity: 90%;
 }
 
@@ -28,8 +29,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     grid-auto-rows: 100px;
-  }
-
+}
 
 @media screen and (max-width: 812px) {
     .container {
