@@ -30,6 +30,18 @@
     grid-auto-rows: 100px;
   }
 
+.bg {
+    background-image: url('../assets/expo-bg.svg');
+
+	/* Full height */
+	height: 80%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 
 @media screen and (max-width: 812px) {
     .container {
