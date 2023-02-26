@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getInnovators } from 'utils/content';
 import styles from 'components/expo.module.css';
 import InnovatorGrid from 'components/innovator-grid';
-
+import BG from 'assets/expo_bg.svg';
 
 function Expo() {
     const [data, setData] = useState([]);
@@ -22,15 +22,16 @@ function Expo() {
     return (
         <> 
             {/* <Background /> */}
-            <main className={styles.container}>
-                <h1 className={styles.header}>
-                    Innovation Expo
-                </h1>
-                <p className={styles.description}>
-                    Short Description of what Innovation Expo is
-                </p>
-                <InnovatorGrid innovators={data}/>
-            </main>
+            <BG className={styles.background} />
+                <main className={styles.container}>
+                    <h1 className={styles.header}>
+                        Innovation Expo
+                    </h1>
+                    <p className={styles.description}>
+                        Short Description of what Innovation Expo is
+                    </p>
+                    <InnovatorGrid innovators={data}/>
+                </main>
         </>
     );
 }

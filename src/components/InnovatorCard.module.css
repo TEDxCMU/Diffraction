@@ -1,0 +1,22 @@
+.container {
+	background-color: #d9d9d9;
+	background: rgba(0, 0, 0, 0.6);
+	grid-column: span 4;
+	margin: 1em;
+	height: 30em;
+	height: 350px;
+	position: relative;
+	border-radius: 6px;
+	border-color: white;
+	border-width: px;
+	border-style: solid;
+}
+
+.name {
+		grid-column: span 12;
+	}
+
+.info {
+	height: 30%;
+	border-width: 2px;
+}
