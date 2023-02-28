@@ -1,6 +1,7 @@
 .container {
-    margin: 5.0rem auto;
-    min-width: 100rem;
+    /* margin: 5.0rem auto; */
+    margin: 0;
+    min-width: 160rem;
 }
 
 .sidebarContainer {
@@ -8,33 +9,31 @@
 }
 
 .header {
-    margin-bottom: 2.4rem;
+    /* margin-bottom: 2.4rem;
     font-size: 4.0rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--c-black);
-    opacity: 90%;
+    opacity: 90%; */
+	grid-column: span 12;
+    margin-bottom: 2.4rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: var(--t-large);
 }
 
 .description {
-    margin-bottom: 2.4rem;
-    font-size: 1.5rem;
-    color: var(--c-black);
+    margin-bottom: 10rem;
+    /* font-size: 1.5rem; */
     opacity: 90%;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: 100px;
-  }
-
-.backgroud {
-    background-image: url('../assets/expo-bg.svg');
+.background {
+    background-image: url('../assets/expo_bg.svg');
 
 	/* Full height */
-	height: 80%;
+    /* height: 80%; */
+	height: 90em;
+    width: 168em;
 
 	/* Center and scale the image nicely */
 	background-position: center;
@@ -43,7 +42,7 @@
 }
 
 
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 720px) {
     .container {
         margin: 3rem;
     }
