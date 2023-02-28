@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
     --c-black: rgb(0, 0, 0);
     --c-white: rgb(255, 255, 255);
+    --c-border: #4f4f4f;
+    --t-title--large: 96px;
+    --t-title: 64px;
     --t-large: 48px;
+    --t-medium-large: 40px;
     --t-medium: 24px;
     --t-small: 18px;
+    --t-xsmall: 14px;
+    --grid-margin: 36px;
 
     --c-black: rgb(0, 0, 0);
     --c-white: rgb(255, 255, 255);
@@ -37,7 +41,7 @@
 }
 
 html {
-    font-family: Inter, Helvetica, sans-serif;
+    font-family: Satoshi, Inter, Helvetica, sans-serif;
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
@@ -62,10 +66,22 @@ a {
     }
 }
 
+.largeTitle {
+    font-family: Void, Bugrino, Inter, "Helvetica Neue";
+    font-size: var(--t-title--large);
+}
+
+.title {
+    font-family: Void, Bugrino, Inter, "Helvetica Neue";
+    text-transform: uppercase;
+    font-size: var(--t-title);
+}
+
 .heading {
     font-weight: 600;
     text-transform: uppercase;
     font-size: var(--t-large);
+    font-family: Bugrino, Inter, "Helvetica Neue";
 }
 
 .subheading {
@@ -75,9 +91,13 @@ a {
 }
 
 .grid {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	align-items: flex-start;
-	grid-column-gap: 10px;
-	margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: flex-start;
+    grid-column-gap: 10px;
+    margin: 0 var(--grid-margin);
+}
+
+.medium-large {
+    font-size: var(--t-medium-large);
 }
