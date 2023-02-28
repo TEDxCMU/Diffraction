@@ -17,6 +17,7 @@
     "@react-three/postprocessing": "^2.7.0",
     "@svgr/webpack": "^6.2.1",
     "@types/three": "^0.149.0",
+    "classnames": "^2.3.2",
     "glsl-noise": "^0.0.0",
     "glslify-loader": "^2.0.0",
     "leva": "^0.9.34",

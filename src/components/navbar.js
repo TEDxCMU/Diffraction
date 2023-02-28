@@ -15,23 +15,23 @@ function NavBar() {
         <>
             <About active={about} setActive={setAbout} />
             <nav ref={parentRef} className={styles.container}>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                     <p className={styles.logo}>TEDxCMU</p>
                 </Link>
                 <div ref={itemsRef} className={styles.links}>
-                    <Link href="/schedule">
+                    <Link legacyBehavior href="/schedule">
                         <a className={styles.link}>Schedule</a>
                     </Link>
-                    <Link href="/speakers">
+                    <Link legacyBehavior href="/speakers">
                         <a className={styles.link}>Speakers</a>
                     </Link>
-                    <Link href="/expo">
+                    <Link legacyBehavior href="/expo">
                         <a className={styles.link}>Innovation Expo</a>
                     </Link>
                     <a onClick={() => setAbout(true)} className={styles.link}>
                         About
                     </a>
-                    <Link href="https://www.tedxcmu.org/">
+                    <Link legacyBehavior href="https://www.tedxcmu.org/">
                         {/* TODO: change to real link later */}
                         <a
                             target="_blank"
