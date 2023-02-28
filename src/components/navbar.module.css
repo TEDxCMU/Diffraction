@@ -1,8 +1,13 @@
+.link:hover {
+    cursor: pointer;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem 36px;
+    font-family: Inter, "Helvetica Neue";
 }
 
 .logo {
@@ -32,7 +37,7 @@
     color: var(--c-white);
     border-radius: 6px;
     font-weight: bold;
-    border: 1px solid black;
+    border: 1px solid var(--c-white);
     padding: 12px;
     transition: background-color 0.6s;
 }
@@ -40,4 +45,36 @@
 .btn:hover {
     background-color: var(--c-white);
     color: var(--c-black);
+}
+
+@media screen and (max-width: 812px) {
+    .container {
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .fixedContainer {
+        position: fixed;
+        top: 0;
+    }
+
+    .logo {
+        width: auto;
+        align-self: flex-start;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+    }
+
+    .button {
+        display: none;
+        width: auto;
+    }
+
+    .links .button {
+        display: block;
+        padding: 1.5rem 3rem;
+    }
 }
