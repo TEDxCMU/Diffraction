@@ -64,9 +64,19 @@ const Scene = () => {
   const dropletRef = useRef();
 
   useFrame(({ mouse }) => {
-    const x = (mouse.x * viewport.width) / 2
-    const y = (mouse.y * viewport.height) / 2
-    dropletRef.current.position.set(x, y, 0)
+    const mouseX = (mouse.x * viewport.width) / 2
+    const mouseY = (mouse.y * viewport.height) / 2
+    const currentX = dropletRef.current.position.x;
+    const currentY = dropletRef.current.position.y;
+    const diff = new Vector2(mouseX - currentX, mouseY - currentY);
+    const easing = 0.05;
+    const scaleEasing = 0.08;
+
+    dropletRef.current.position.x += (mouseX - currentX) * easing
+    dropletRef.current.position.y += (mouseY - currentY) * easing
+    dropletRef.current.scale.x = diff.length() * scaleEasing + 0.1;
+    dropletRef.current.scale.y = diff.length() * scaleEasing + 0.1;
+    dropletRef.current.scale.z = diff.length() * scaleEasing + 0.1;
   })
 
   // const { distortion, distortion2, speed, rollSpeed } = useControls('BadTV', {
@@ -99,14 +109,15 @@ const Scene = () => {
   return (
     <>
       <GradientEffect/>
-      <mesh position={dropletRef.mouse} ref={dropletRef}>
-        <sphereGeometry args={[0.1, 32, 32]}/>
-        <meshPhysicalMaterial roughness={0} transmission={1} thickness={4} />
+      <mesh position={dropletRef.mouse} ref={dropletRef} scale={0.1}>
+        <sphereGeometry args={[1, 32, 32]}/>
+        <meshPhysicalMaterial roughness={0} transmission={1} thickness={20} />
       </mesh>
       <EffectComposer >
         {/* <WaterEffect ref={waterRef}/> */}
         {/* <BadTV distortion={distortion} distortion2={distortion2} speed={speed} rollSpeed={rollSpeed} /> */}
-        <HueSaturation saturation={0.05}/>
+        <HueSaturation saturation={0.5}/>
+        <Bloom />
       </EffectComposer>
     </>
   );
@@ -116,7 +127,7 @@ function Gradient() {
 
   return (
   <div style={{ position:"absolute", left:0, width: "100vw", height: "100vh" }}>
-    <Canvas camera={{ position: [0, 0, 1], fov: 50}}>
+    <Canvas camera={{ position: [0, 0, 1], fov: 40}}>
       <OrbitControls />
       <Suspense fallback={null}>
         <Scene />
