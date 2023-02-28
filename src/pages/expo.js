@@ -1,3 +1,4 @@
+import { Background } from "components/background";
 import { useState, useEffect } from "react";
 import { getInnovators } from "utils/content";
 
@@ -13,7 +14,12 @@ function InnovationExpo() {
         setData(content);
     }
 
-    return <div className="title">Innovation Expo</div>;
+    return (
+        <>
+            <Background />
+            <div className="title">Innovation Expo</div>
+        </>
+    );
 }
 
 export default InnovationExpo;

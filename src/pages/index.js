@@ -1,8 +1,10 @@
+import { Background } from "components/background";
 import styles from "./index.module.css";
 
 function Home() {
     return (
         <div className={styles.container}>
+            <Background home />
             <div className={styles.headerContainer}>
                 <div className={styles.eventInfo}>
                     <h1 className="largeTitle">diffraction</h1>
