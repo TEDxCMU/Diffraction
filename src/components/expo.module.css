@@ -1,41 +1,34 @@
 .container {
     /* margin: 5.0rem auto; */
-    margin: 0;
     min-width: 160rem;
 }
+
 
 .sidebarContainer {
     margin: 3rem;
 }
 
 .header {
-    /* margin-bottom: 2.4rem;
-    font-size: 4.0rem;
-    font-weight: 600;
+	font-family: Void, Bugrino, Inter, "Helvetica Neue";
     text-transform: uppercase;
-    opacity: 90%; */
-	grid-column: span 12;
-    margin-bottom: 2.4rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	font-size: var(--t-large);
+    font-size: var(--t-title);
+    margin: 4.5rem;
 }
 
+
 .description {
-    margin-bottom: 10rem;
-    /* font-size: 1.5rem; */
+    margin-left: 4.5rem;
+    margin-bottom: 3rem;
+    font-size: var(--t-small);
+    display: block;
     opacity: 90%;
+
 }
 
 .background {
     background-image: url('../assets/expo_bg.svg');
+    height: 80%;
 
-	/* Full height */
-    /* height: 80%; */
-	height: 90em;
-    width: 168em;
-
-	/* Center and scale the image nicely */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;

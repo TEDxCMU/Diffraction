@@ -25,9 +25,11 @@ function NavBar() {
                     <Link href="/speakers">
                         <a className={styles.link}>Speakers</a>
                     </Link>
-                    <Link href="/expo">
-                        <a className={styles.link}>Innovation Expo</a>
-                    </Link>
+                    {/* <div className={styles.exponav}> */}
+                        <Link href="/expo">
+                            <a className={styles.link}>Innovation Expo</a>
+                        </Link>
+                    {/* </div> */}
                     <a onClick={() => setAbout(true)} className={styles.link}>
                         About
                     </a>

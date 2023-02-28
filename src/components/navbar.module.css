@@ -47,6 +47,14 @@
     color: var(--c-black);
 }
 
+.exponav {
+    /* background: url('../assets/expo_bg.svg'); */
+    background-size: cover;
+
+    /* Workaround for some mobile browsers */
+    min-height: 100%;
+}
+
 @media screen and (max-width: 812px) {
     .container {
         width: 100%;
