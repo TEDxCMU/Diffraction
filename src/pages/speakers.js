@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getSpeakers } from "utils/content";
+import { Layout } from "components/layouts";
 
 function Speakers() {
     const [data, setData] = useState(null);
@@ -17,5 +18,13 @@ function Speakers() {
 
     return <div className="title">Speakers</div>;
 }
+
+Speakers.getLayout = function getLayout(page) {
+    return (
+      <Layout>
+        {page}
+      </Layout>
+    )
+  }
 
 export default Speakers;

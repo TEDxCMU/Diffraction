@@ -1,4 +1,4 @@
-import { Background } from "components/background";
+import { HomeLayout } from "components/layouts";
 import styles from "./index.module.css";
 
 function Home() {
@@ -17,5 +17,13 @@ function Home() {
         </div>
     );
 }
+
+Home.getLayout = function getLayout(page) {
+    return (
+      <HomeLayout>
+        {page}
+      </HomeLayout>
+    )
+  }
 
 export default Home;
