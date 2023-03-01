@@ -7,10 +7,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <NavBar />
-      {/* <div className="grid"> */}
       <Background />
-      <Component {...pageProps} />
-      {/* </div> */}
+      <div className='grid content'>
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }

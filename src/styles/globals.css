@@ -82,3 +82,8 @@ a {
 .medium-large {
     font-size: var(--t-medium-large);
 }
+
+.content {
+    z-index: 3;
+    position: relative;
+}

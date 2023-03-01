@@ -62,6 +62,7 @@ const Droplet = () => {
     const currentY = dropletRef.current.position.y;
     const diff = new Vector2(mouseX - currentX, mouseY - currentY);
     
+    console.log(diff)
     const easing = 0.05;
     const scaleEasing = 0.08;
 
@@ -95,6 +96,7 @@ const Scene = (props) => {
   );
 }
 
+// home: if true then it shows the interactive blob thing
 export function Background(props) {
 
   return (

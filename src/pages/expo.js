@@ -14,12 +14,7 @@ function InnovationExpo() {
         setData(content);
     }
 
-    return (
-        <>
-            <Background />
-            <div className="title">Innovation Expo</div>
-        </>
-    );
+    return <div className="title">Innovation Expo</div>;
 }
 
 export default InnovationExpo;
