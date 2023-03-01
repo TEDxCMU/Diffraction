@@ -101,6 +101,7 @@ const Droplet = () => {
 
   const { viewport } = useThree();
   const dropletRef = useRef();
+  const { scale } = useControls({ scale: 0.07 })
 
   useFrame(({ mouse }) => {
     const mouseX = (mouse.x * viewport.width) / 2
@@ -121,7 +122,7 @@ const Droplet = () => {
   });
 
   return (
-    <mesh position={dropletRef.mouse} ref={dropletRef} scale={0.07}>
+    <mesh position={dropletRef.mouse} ref={dropletRef} scale={scale}>
         <sphereGeometry args={[1, 32, 32]}/>
         <meshPhysicalMaterial roughness={0} transmission={1} thickness={20} />
     </mesh>
