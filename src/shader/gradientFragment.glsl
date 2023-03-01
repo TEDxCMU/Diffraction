@@ -10,6 +10,16 @@ varying vec2 vUv;
 varying vec3 vPosition;
 uniform vec3 uMouse;
 
+uniform float uNoiseFreq;
+uniform float uNoiseAmp;
+uniform float uNoiseSpeed;
+uniform float uOffset1;
+uniform float uOffset2;
+uniform float uSmoothstepMin;
+uniform float uSmoothstepMax;
+uniform float uDistRadius;
+uniform float uSeed;
+
 #pragma glslify: snoise3 = require(glsl-noise/simplex/3d);
 
 float map(float value, float min1, float max1, float min2, float max2) {
@@ -31,20 +41,12 @@ vec3 overlay(vec3 color1, vec3 color2) {
 }
 
 void main() {
-  float noiseFreq = 15.;
-  float noiseAmp = 0.5;
-  float noiseSpeed = 0.03;
-  float offset1 = 0.03;
-  float offset2 = 0.17;
-  float smoothstepMin = 0.1;
-  float smoothstepMax = 0.5;
-  float distRadius = 0.1;
 
-  vec3 noisePos = vec3(vPosition * noiseFreq + uTime) * noiseSpeed;
+  vec3 noisePos = vec3(vPosition * uNoiseFreq + uTime) * uNoiseSpeed + uSeed;
 
-  float n = smoothstep(smoothstepMin, smoothstepMax, snoise3(noisePos)) * noiseAmp;
-  float m = smoothstep(smoothstepMin, smoothstepMax, snoise3(noisePos + offset1)) * noiseAmp;
-  float l = smoothstep(smoothstepMin, smoothstepMax, snoise3(noisePos + offset2)) * noiseAmp;
+  float n = smoothstep(uSmoothstepMin, uSmoothstepMax, snoise3(noisePos)) * uNoiseAmp;
+  float m = smoothstep(uSmoothstepMin, uSmoothstepMax, snoise3(noisePos + uOffset1)) * uNoiseAmp;
+  float l = smoothstep(uSmoothstepMin, uSmoothstepMax, snoise3(noisePos + uOffset2)) * uNoiseAmp;
 
   vec2 direction = normalize(vPosition.xy - uMouse.xy);
   float dist = length(vPosition - uMouse);
