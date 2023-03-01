@@ -11,21 +11,28 @@ function Speakers() {
         init();
     }, []);
 
+    function compareOrder(a, b) {
+        console.log(a.links[0].text);
+        return a.links[0].text - b.links[0].text;
+    }
+
     async function init() {
         const content = await getSpeakers();
         const speakers = content.map(({ data }) => data);
-        setData(speakers);
+        const speakersOrdered = speakers.sort(compareOrder);
+
+        setData(speakersOrdered);
         setLoading(false);
     }
 
     return (
         <>
             <div className={styles.bg}>
-                <text className={styles.headingFull}>Speakers</text>
-                <text className={styles.description}>a short description</text>
-                <div className="grid">
+                <h2 className={styles.headingFull}>Speakers</h2>
+                <h3 className={styles.description}>a short description</h3>
+                <div className={styles.grid}>
                     {loading ? (
-                        <text>Loading</text>
+                        <h1>Loading</h1>
                     ) : (
                         data.map((item, id) => (
                             <SpeakerCard key={id} speaker={item} />

@@ -49,12 +49,6 @@
     object-fit: cover;
 }
 
-@media (max-width: 844px) {
-    .container {
-        grid-column: span 12;
-    }
-}
-
 .info {
     height: 30%;
     border-top: 1px solid white;
@@ -100,4 +94,14 @@
 
 .modal {
     padding: 0;
+}
+
+@media (max-width: 844px) {
+    .container {
+        grid-column: span 12;
+    }
+    .modalImage {
+        justify-content: center;
+        min-width: 100%;
+    }
 }

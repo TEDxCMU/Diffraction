@@ -15,9 +15,9 @@ export default function SpeakerCard(props) {
             >
                 <img className={styles.image} src={speaker.image.url}></img>
                 <div className={styles.info}>
-                    <text className={styles.name}>{speaker.name}</text>
-                    <text className={styles.title}>{speaker.title}</text>
-                    <text className={styles.number}>1</text>
+                    <h1 className={styles.name}>{speaker.name}</h1>
+                    <h2 className={styles.title}>{speaker.title}</h2>
+                    <h2 className={styles.number}>{speaker.links[0].text}</h2>
                 </div>
             </div>
             <Modal large active={openModal} setActive={setOpenModal}>
