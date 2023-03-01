@@ -49,6 +49,7 @@ const GradientEffect = (props) => {
     }
   });
 
+  // comment this for final version
   const { uColor1,
     uColor2,
     uColor3,
@@ -76,6 +77,7 @@ const GradientEffect = (props) => {
   return (
     <mesh>
       <sphereGeometry args={[1.5, 64, 32]}/>
+      {/* also replace this w below for final version */}
       <gradientMaterial uColor1={uColor1}
                         uColor2={uColor2}
                         uColor3={uColor3}
@@ -111,14 +113,9 @@ const Droplet = () => {
     const diff = new Vector2(mouseX - currentX, mouseY - currentY);
     
     const easing = 0.05;
-    const scaleEasing = 0.08;
 
     dropletRef.current.position.x += diff.x * easing
     dropletRef.current.position.y += diff.y * easing
-
-    // dropletRef.current.scale.x = diff.length() * scaleEasing + 0.1;
-    // dropletRef.current.scale.y = diff.length() * scaleEasing + 0.1;
-    // dropletRef.current.scale.z = diff.length() * scaleEasing + 0.1;
   });
 
   return (
