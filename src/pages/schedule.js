@@ -71,13 +71,17 @@ function Talks(props){
         ) : (
             <div className = "card">
                 <div className = "container">
-                    <div className = "left">
-                        <h2 className = "subheading">{props.title}</h2>
-                        <p className>{Object.values(props.speaker.data)[0]}</p>
-                        <p className = "description">{props.description}</p>   
+                    <div className = "top">
+                        <div className = "left">
+                            <h2 className = "subheading">{props.title}</h2>
+                            <p className = "about">{Object.values(props.speaker.data)[0]}</p>
+                        </div>
+                        <div className = "right">
+                            <p> {props.time} </p>
+                        </div>
                     </div>
-                    <div className = "right">
-                        <p> {props.time} </p>
+                    <div className = "desMobile">
+                        <p className = "about">{props.description}</p>   
                     </div>
                 </div>
             </div>

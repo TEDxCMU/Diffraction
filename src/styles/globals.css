@@ -8,7 +8,7 @@
     --t-medium-large: 32px;
     --t-medium: 22px;
     --t-small: 18px;
-    --t-xsmall: 14px;
+    --t-xsmall: 12px;
     --grid-margin: 36px;
 }
 
@@ -114,13 +114,35 @@ a {
         text-transform: uppercase;
         font-size: var(--t-small);
     }
+    
+    .about{
+        font-size: var(--t-xsmall)
+    }
 
     .container {
+        display: block; 
         padding-bottom: 10%; 
+    }
+
+    .right{
+        display: flex;
+        justify-content: right; 
+        align-items:flex-start;
+        padding: 3%; 
+        width: 33%;
+    }
+
+    .top{
+        display: flex; 
     }
 
     .description{
         margin-top: 10%
+    }
+
+    .desMobile{
+        display: block; 
+        padding: 5%; 
     }
     
 }
