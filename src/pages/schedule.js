@@ -22,7 +22,6 @@ function Schedule() {
             {loading ?  
             <p> Loading</p>
             :( data?.map((talks, idx)=>{
-                console.log(Object.values(talks.description)[0].text)
                 return <Talks
                 key = {idx}
                 title = {talks.title}
@@ -51,15 +50,17 @@ function Talks(props){
         window.addEventListener("resize", handleResize)
     })
 
-    return(      
+    return(    
         ! isMobile ? (
         <div className = "card">
-            <p> {props.time} </p>
+            <p className = "about"> {props.time} </p>
             <div className = "container">
                 <div className = "left">
                     <h2 className = "subheading">{props.title}</h2>
-                    <p className>{props.speaker.uid}</p>
-                    <p className = "description">{props.description}</p>
+                    <p className = "about">{Object.values(props.speaker.data)[0]}</p>
+                    <div className = "info">
+                        <p className = "about">{props.description}</p>
+                    </div>
                     
                 </div>
                 <div className = "right">
@@ -72,7 +73,7 @@ function Talks(props){
                 <div className = "container">
                     <div className = "left">
                         <h2 className = "subheading">{props.title}</h2>
-                        <p className>{props.speaker.uid}</p>
+                        <p className>{Object.values(props.speaker.data)[0]}</p>
                         <p className = "description">{props.description}</p>   
                     </div>
                     <div className = "right">

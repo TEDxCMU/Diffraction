@@ -1,6 +1,7 @@
 import 'styles/fonts.css';
 import 'styles/globals.css';
 import NavBar from 'components/navbar';
+import Footer from 'components/footer';
 //import Footer from 'components/footer';
 
 function MyApp({ Component, pageProps }) {
@@ -10,6 +11,7 @@ function MyApp({ Component, pageProps }) {
       <div className="grid">
         <Component {...pageProps} />
       </div>
+      <Footer />
     </>
   );
 }

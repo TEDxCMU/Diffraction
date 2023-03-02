@@ -6,8 +6,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 36px;
-    margin-bottom: 1rem;
+    padding-top: 3rem 0 3rem 0; 
+    margin-top: 3rem; 
+    margin-bottom: 5rem;
 }
 
 .logo {
@@ -23,12 +24,16 @@
     text-transform: capitalize;
 }
 
-.link,
+.link_header,
 .logo {
     font-size: var(--t-small);
 }
 
-.link:not(:last-child) {
+.link_footer {
+    font-size: var(--t-xsmall)
+}
+
+.link_header, .link_footer:not(:last-child) {
     margin-right: 7rem;
 }
 

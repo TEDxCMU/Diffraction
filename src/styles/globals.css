@@ -5,8 +5,8 @@
     --t-title--large: 96px;
     --t-title: 64px;
     --t-large: 48px;
-    --t-medium-large: 40px;
-    --t-medium: 24px;
+    --t-medium-large: 32px;
+    --t-medium: 22px;
     --t-small: 18px;
     --t-xsmall: 14px;
     --grid-margin: 36px;
@@ -25,16 +25,17 @@ html {
     font-family: Satoshi, Inter, Helvetica, sans-serif;
     font-size: 62.5%;
     scroll-behavior: smooth;
-}
-
-body,
-#__next {
     box-sizing: border-box;
     color: var(--c-white);
     background: 
     radial-gradient(ellipse at center, #8500c3, transparent),
     radial-gradient(ellipse at top, #e66465, transparent), 
     radial-gradient(ellipse at bottom, #000000, transparent);  ;
+}
+
+body,
+#__next {
+    margin: 0 2% 0 2%; 
 }
 
 a {
@@ -54,11 +55,11 @@ a {
 .subheading {
     font-weight: bold;
     text-transform: uppercase;
-    font-size: var(--t-medium);
+    font-size: var(--t-medium-large);
 }
 
-.name{
-    font-weight: bold
+.about{
+    font-size: var(--t-medium)
 }
 
 .topLine {
@@ -69,19 +70,10 @@ a {
     margin: 5% 0 0% 0;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
-    grid-column-gap: 10px;
-    margin: 0 36px; 
-}
-
 .card{
     display: block; 
-    grid-column: span 12; 
-    grid-row: span 2; 
-    margin-top: 2%; 
+    width: 100%; 
+    margin-top: 2%;
 }
 
 .container {
@@ -95,13 +87,16 @@ a {
 }
 
 .left{
-    padding: 3% 0 10% 3%; 
+    padding: 3% 0 10% 5%; 
     width: 66%; 
 }
 
 .right{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
     padding: 3%; 
-    width: 33%; 
+    width: 33%;
 }
 
 
