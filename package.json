@@ -25,7 +25,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.150.1",
-    "three-stdlib": "^2.21.8"
+    "three-stdlib": "^2.21.8",
+    "react-responsive": "^9.0.2",
+    "react-responsive-modal": "^6.4.1"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.7",
