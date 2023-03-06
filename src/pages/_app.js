@@ -1,16 +1,9 @@
 import "styles/fonts.css";
 import "styles/globals.css";
-import NavBar from "components/navbar";
 
 function MyApp({ Component, pageProps }) {
-    return (
-        <>
-            <NavBar />
-            {/* <div className="grid"> */}
-            <Component {...pageProps} />
-            {/* </div> */}
-        </>
-    );
+    const getLayout = Component.getLayout || ((page) => page);
+    return getLayout(<Component {...pageProps} />);
 }
 
 export default MyApp;

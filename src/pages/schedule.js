@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getSchedule } from "utils/content";
+import { Layout } from 'components/layouts'
 
 function Schedule() {
     const [data, setData] = useState(null);
@@ -15,5 +16,13 @@ function Schedule() {
 
     return <div className="title">Schedule</div>;
 }
+
+Schedule.getLayout = function getLayout(page) {
+    return (
+      <Layout>
+        {page}
+      </Layout>
+    )
+  }
 
 export default Schedule;

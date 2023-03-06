@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getSpeakers } from "utils/content";
+import { Layout } from "components/layouts";
 import SpeakerCard from "components/SpeakerCard";
 
 import styles from "./speakers.module.css";
@@ -43,5 +44,9 @@ function Speakers() {
         </>
     );
 }
+
+Speakers.getLayout = function getLayout(page) {
+    return <Layout>{page}</Layout>;
+};
 
 export default Speakers;
