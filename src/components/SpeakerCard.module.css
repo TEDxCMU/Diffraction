@@ -47,11 +47,11 @@
     width: 100%;
     height: 65%;
     object-fit: cover;
+    border-bottom: 1px solid white;
 }
 
 .info {
     height: 30%;
-    border-top: 1px solid white;
     padding: 20px;
 }
 
