@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getInnovators } from "utils/content";
 import ExpoComp from "components/expo";
+import styles from "components/InnovatorCard";
 import { Layout } from "components/layouts";
 
 function InnovationExpo() {

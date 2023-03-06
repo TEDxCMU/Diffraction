@@ -45,6 +45,7 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    background-color: var(--c-black);
     color: var(--c-white);
 }
 
@@ -88,10 +89,10 @@ a {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(75px, max-content));
+    grid-template-columns: repeat(12, 1fr);
     align-items: flex-start;
     grid-column-gap: 10px;
-    margin: 0 var(--grid-margin);
+    margin: 0;
     min-width: 500px;
 }
 

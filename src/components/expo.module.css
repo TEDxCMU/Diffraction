@@ -1,6 +1,6 @@
 .container {
-    margin: 5rem auto;
-    min-width: 100rem;
+    /* margin: 5.0rem auto; */
+    min-width: 160rem;
 }
 
 .sidebarContainer {
@@ -8,30 +8,28 @@
 }
 
 .header {
-    margin-bottom: 2.4rem;
-    font-size: 4rem;
-    font-weight: 600;
+    font-family: Void, Bugrino, Inter, "Helvetica Neue";
     text-transform: uppercase;
-    color: var(--c-white);
-    opacity: 90%;
-    font-family: Void, Inter, "Helvetica Neue";
+    font-size: var(--t-title);
 }
 
 .description {
-    margin-bottom: 2.4rem;
-    font-size: 1.5rem;
-    color: var(--c-white);
+    margin-bottom: 3rem;
+    font-size: var(--t-small);
+    display: block;
     opacity: 90%;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: 100px;
+.background {
+    background-image: url("../assets/expo_bg.svg");
+    height: 80%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 720px) {
     .container {
         margin: 3rem;
     }

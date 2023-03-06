@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { getInnovators } from "utils/content";
 import styles from "components/expo.module.css";
-import InnovatorGrid from "components/innovator-grid";
+import InnovatorCard from "components/InnovatorCard";
 
 function Expo() {
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         init();
@@ -12,21 +13,26 @@ function Expo() {
 
     async function init() {
         const content = await getInnovators();
-        setData(content);
+        const innovators = content.map(({ data }) => data);
+        setData(innovators);
+        console.log(data);
+        setLoading(false);
     }
-
-    console.log(data);
 
     return (
         <div className="pageContainer">
-            {/* <Background /> */}
-            <main className={styles.container}>
-                <h1 className="title">Speakers</h1>
-                {/* <p className={styles.description}>
-                    Short Description of what Innovation Expo is
-                </p> */}
-                <InnovatorGrid innovators={data} />
-            </main>
+            <div>
+                <text className={styles.header}>Innovation Expo</text>
+                <div className="grid">
+                    {loading ? (
+                        <text>Loading</text>
+                    ) : (
+                        data?.map((item, id) => (
+                            <InnovatorCard idx={id} innovator={item} />
+                        ))
+                    )}
+                </div>
+            </div>
         </div>
     );
 }
