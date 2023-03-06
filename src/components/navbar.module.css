@@ -6,8 +6,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 36px;
+    padding: 3rem 0px;
     font-family: Inter, "Helvetica Neue";
+    z-index: 3;
+    position: relative;
 }
 
 .logo {
@@ -45,4 +47,36 @@
 .btn:hover {
     background-color: var(--c-white);
     color: var(--c-black);
+}
+
+@media screen and (max-width: 812px) {
+    .container {
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .fixedContainer {
+        position: fixed;
+        top: 0;
+    }
+
+    .logo {
+        width: auto;
+        align-self: flex-start;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+    }
+
+    .button {
+        display: none;
+        width: auto;
+    }
+
+    .links .button {
+        display: block;
+        padding: 1.5rem 3rem;
+    }
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getInnovators } from "utils/content";
 import ExpoComp from "components/expo";
+import { Layout } from "components/layouts";
 
 function InnovationExpo() {
     const [data, setData] = useState(null);
@@ -18,5 +19,9 @@ function InnovationExpo() {
 
     return <ExpoComp />;
 }
+
+InnovationExpo.getLayout = function getLayout(page) {
+    return <Layout>{page}</Layout>;
+};
 
 export default InnovationExpo;

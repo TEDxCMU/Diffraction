@@ -18,16 +18,16 @@ function Expo() {
     console.log(data);
 
     return (
-        <>
+        <div className="pageContainer">
             {/* <Background /> */}
             <main className={styles.container}>
                 <h1 className="title">Speakers</h1>
-                <p className={styles.description}>
+                {/* <p className={styles.description}>
                     Short Description of what Innovation Expo is
-                </p>
+                </p> */}
                 <InnovatorGrid innovators={data} />
             </main>
-        </>
+        </div>
     );
 }
 
