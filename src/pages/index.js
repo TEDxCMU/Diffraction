@@ -11,19 +11,15 @@ function Home() {
                     <p className="heading medium-large">March 25, 7 pm EST</p>
                 </div>
             </div>
-            <div className={styles.talks}>
+            {/* <div className={styles.talks}>
                 <p className="subheading">TALKS</p>
-            </div>
+            </div> */}
         </div>
     );
 }
 
 Home.getLayout = function getLayout(page) {
-    return (
-      <HomeLayout>
-        {page}
-      </HomeLayout>
-    )
-  }
+    return <HomeLayout>{page}</HomeLayout>;
+};
 
 export default Home;
