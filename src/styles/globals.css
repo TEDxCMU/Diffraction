@@ -27,9 +27,6 @@ html {
     scroll-behavior: smooth;
     box-sizing: border-box;
     color: var(--c-white);
-    background: radial-gradient(ellipse at center, #8500c3, transparent),
-        radial-gradient(ellipse at top, #e66465, transparent),
-        radial-gradient(ellipse at bottom, #000000, transparent);
 }
 
 body {
