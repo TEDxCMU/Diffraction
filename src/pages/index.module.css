@@ -11,12 +11,14 @@
 }
 
 .eventInfo {
-    width: calc(100vw - (var(--grid-margin) * 2));
+    /* width: calc(100vw - (var(--grid-margin) * 2)); */
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    left: var(--grid-margin);
+    right: var(--grid-margin);
 }
 
 .talks {
