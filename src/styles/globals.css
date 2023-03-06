@@ -32,8 +32,7 @@ html {
         radial-gradient(ellipse at bottom, #000000, transparent);
 }
 
-body,
-#__next {
+body {
     margin: 0 2% 0 2%;
 }
 
@@ -44,10 +43,21 @@ a {
     transition: opacity 0.3s;
 }
 
+.largeTitle {
+    font-family: Void, Bugrino, Inter, "Helvetica Neue";
+    font-size: var(--t-title--large);
+}
+
+.title {
+    font-family: Void, Bugrino, Inter, "Helvetica Neue";
+    text-transform: uppercase;
+    font-size: var(--t-title);
+}
+
 .heading {
     font-weight: 600;
     text-transform: uppercase;
-    font-size: var(--t-large);
+    font-size: var(--t-medium-large);
     font-family: Bugrino, Inter, "Helvetica Neue";
 }
 
@@ -108,6 +118,10 @@ a {
 
 .description {
     margin-top: 5%;
+}
+
+.pageContainer {
+    padding: 0px var(--grid-margin);
 }
 
 @media screen and (max-width: 800px) {

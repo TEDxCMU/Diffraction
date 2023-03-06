@@ -27,10 +27,9 @@ function Speakers() {
     }
 
     return (
-        <>
+        <div className="pageContainer">
             <div className={styles.bg}>
-                <h2 className={styles.headingFull}>Speakers</h2>
-                <h3 className={styles.description}>a short description</h3>
+                <h2 className="title">Speakers</h2>
                 <div className={styles.grid}>
                     {loading ? (
                         <h1>Loading</h1>
@@ -41,7 +40,7 @@ function Speakers() {
                     )}
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
