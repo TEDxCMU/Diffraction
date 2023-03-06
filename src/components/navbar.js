@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "components/navbar.module.css";
 import cn from "classnames";
@@ -10,6 +10,19 @@ function NavBar() {
     const parentRef = useRef(null);
     const itemsRef = useRef(null);
     const [about, setAbout] = useState(false);
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    const handleResize = () => {
+        if (window.innerWidth < 812) {
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+        }
+    };
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+    });
 
     return (
         <>
