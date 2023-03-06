@@ -6,9 +6,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 3rem 0 3rem 0; 
-    margin-top: 3rem; 
+    margin-top: 3rem;
     margin-bottom: 5rem;
+    padding: 3rem 36px;
+    font-family: Inter, "Helvetica Neue";
+    z-index: 3;
+    position: relative;
 }
 
 .logo {
@@ -30,10 +33,11 @@
 }
 
 .link_footer {
-    font-size: var(--t-xsmall)
+    font-size: var(--t-xsmall);
 }
 
-.link_header, .link_footer:not(:last-child) {
+.link_header,
+.link_footer:not(:last-child) {
     margin-right: 7rem;
 }
 
@@ -50,4 +54,36 @@
 .btn:hover {
     background-color: var(--c-white);
     color: var(--c-black);
+}
+
+@media screen and (max-width: 812px) {
+    .container {
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .fixedContainer {
+        position: fixed;
+        top: 0;
+    }
+
+    .logo {
+        width: auto;
+        align-self: flex-start;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+    }
+
+    .button {
+        display: none;
+        width: auto;
+    }
+
+    .links .button {
+        display: block;
+        padding: 1.5rem 3rem;
+    }
 }

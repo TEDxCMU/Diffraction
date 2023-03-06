@@ -27,15 +27,14 @@ html {
     scroll-behavior: smooth;
     box-sizing: border-box;
     color: var(--c-white);
-    background: 
-    radial-gradient(ellipse at center, #8500c3, transparent),
-    radial-gradient(ellipse at top, #e66465, transparent), 
-    radial-gradient(ellipse at bottom, #000000, transparent);  ;
+    background: radial-gradient(ellipse at center, #8500c3, transparent),
+        radial-gradient(ellipse at top, #e66465, transparent),
+        radial-gradient(ellipse at bottom, #000000, transparent);
 }
 
 body,
 #__next {
-    margin: 0 2% 0 2%; 
+    margin: 0 2% 0 2%;
 }
 
 a {
@@ -58,53 +57,60 @@ a {
     font-size: var(--t-medium-large);
 }
 
-.about{
-    font-size: var(--t-medium)
+.about {
+    font-size: var(--t-medium);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: flex-start;
+    grid-column-gap: 10px;
+    margin: 0 var(--grid-margin);
+    min-width: 500px;
 }
 
 .topLine {
-    display: flex; 
+    display: flex;
 }
 
 .info {
     margin: 5% 0 0% 0;
 }
 
-.card{
-    display: block; 
-    width: 100%; 
+.card {
+    display: block;
+    width: 100%;
     margin-top: 2%;
 }
 
 .container {
-    display: flex; 
-    background-color: rgba(0,0,0,0.3); 
-    border-radius: 5px; 
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
     border-style: solid;
     border-color: white;
-    border-width: 1px; 
-    margin-top: 1%; 
+    border-width: 1px;
+    margin-top: 1%;
 }
 
-.left{
-    padding: 3% 0 10% 5%; 
-    width: 66%; 
+.left {
+    padding: 3% 0 10% 5%;
+    width: 66%;
 }
 
-.right{
-    display: flex; 
+.right {
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3%; 
+    padding: 3%;
     width: 33%;
 }
 
-
-.description{
-    margin-top: 5%
+.description {
+    margin-top: 5%;
 }
 
-@media screen and (max-width: 800px ) {
+@media screen and (max-width: 800px) {
     html {
         font-size: 50%;
     }
@@ -114,35 +120,39 @@ a {
         text-transform: uppercase;
         font-size: var(--t-small);
     }
-    
-    .about{
-        font-size: var(--t-xsmall)
+
+    .about {
+        font-size: var(--t-xsmall);
     }
 
     .container {
-        display: block; 
-        padding-bottom: 10%; 
+        display: block;
+        padding-bottom: 10%;
     }
 
-    .right{
+    .right {
         display: flex;
-        justify-content: right; 
-        align-items:flex-start;
-        padding: 3%; 
+        justify-content: right;
+        align-items: flex-start;
+        padding: 3%;
         width: 33%;
     }
 
-    .top{
-        display: flex; 
+    .top {
+        display: flex;
     }
 
-    .description{
-        margin-top: 10%
+    .description {
+        margin-top: 10%;
     }
 
-    .desMobile{
-        display: block; 
-        padding: 5%; 
+    .desMobile {
+        display: block;
+        padding: 5%;
     }
-    
+}
+
+.content {
+    z-index: 3;
+    position: relative;
 }

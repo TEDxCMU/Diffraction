@@ -1,58 +1,63 @@
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import styles from 'components/navbar.module.css';
-//import cn from 'classnames';
+import { useRef, useState, useEffect } from "react";
+import Link from "next/link";
+import styles from "components/navbar.module.css";
+import cn from "classnames";
+
+import Menu from "components/menu";
+import About from "components/about";
 
 function NavBar() {
+    const parentRef = useRef(null);
+    const itemsRef = useRef(null);
+    const [about, setAbout] = useState(false);
 
-    const [isMobile, setIsMobile] = useState(false)
+    const [isMobile, setIsMobile] = useState(false);
 
     const handleResize = () => {
         if (window.innerWidth < 812) {
-            setIsMobile(true)
+            setIsMobile(true);
         } else {
-            setIsMobile(false)
+            setIsMobile(false);
         }
-    }
+    };
     useEffect(() => {
-        window.addEventListener("resize", handleResize)
-    })
-    
-    return (
-        !isMobile? 
-            (<>
-                <nav className={styles.container}>
-                <Link href="/">
-                    <a className={styles.link_header}>TEDxCMU</a>
-                </Link>
-                <div className={styles.links}>
-                    <Link href="/schedule">
-                        <a className={styles.link_header}>Schedule</a>
-                    </Link>
-                    <Link href="/speakers">
-                        <a className={styles.link_header}>Speakers</a>
-                    </Link>
-                    <Link href="/expo">
-                        <a className={styles.link_header}>Innovation Expo</a>
-                    </Link>
-                    <Link href="/about">
-                        <a className={styles.link_header}>About</a>
-                    </Link>
-                    {/*<Link href="https://www.tedxcmu.org/">
+        window.addEventListener("resize", handleResize);
+    });
 
-                        <a target="_blank" className={cn(styles.link, styles.btn)}>
+    return (
+        <>
+            <About active={about} setActive={setAbout} />
+            <nav ref={parentRef} className={styles.container}>
+                <Link legacyBehavior href="/">
+                    <p className={styles.logo}>TEDxCMU</p>
+                </Link>
+                <div ref={itemsRef} className={styles.links}>
+                    <Link legacyBehavior href="/schedule">
+                        <a className={styles.link}>Schedule</a>
+                    </Link>
+                    <Link legacyBehavior href="/speakers">
+                        <a className={styles.link}>Speakers</a>
+                    </Link>
+                    <Link legacyBehavior href="/expo">
+                        <a className={styles.link}>Innovation Expo</a>
+                    </Link>
+                    <a onClick={() => setAbout(true)} className={styles.link}>
+                        About
+                    </a>
+                    <Link legacyBehavior href="https://www.tedxcmu.org/">
+                        {/* TODO: change to real link later */}
+                        <a
+                            target="_blank"
+                            className={cn(styles.link, styles.btn)}
+                        >
                             Purchase Tickets
                         </a>
-                        </Link>*/}
+                    </Link>
                 </div>
-            </nav> </>)
-            : (<nav className = {styles.container}> 
-            <a className={styles.link}> Hamburger </a>
-                <Link href="/">
-                    <a className={styles.link}>TEDxCMU</a>
-                </Link>
-            </nav>)
-    )
+                <Menu parent={parentRef} items={itemsRef} />
+            </nav>
+        </>
+    );
 }
 
 export default NavBar;

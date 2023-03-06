@@ -1,19 +1,9 @@
-import 'styles/fonts.css';
-import 'styles/globals.css';
-import NavBar from 'components/navbar';
-import Footer from 'components/footer';
-//import Footer from 'components/footer';
+import "styles/fonts.css";
+import "styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <NavBar />
-      <div className="grid">
-        <Component {...pageProps} />
-      </div>
-      <Footer />
-    </>
-  );
+    const getLayout = Component.getLayout || ((page) => page);
+    return getLayout(<Component {...pageProps} />);
 }
 
 export default MyApp;
