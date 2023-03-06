@@ -6,8 +6,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
     padding: 3rem 36px;
     font-family: Inter, "Helvetica Neue";
     z-index: 3;
@@ -16,7 +14,7 @@
 
 .logo {
     font-size: var(--t-small);
-    font-weight: 600px;
+    font-weight: 600;
 }
 
 .logo:hover {
@@ -27,17 +25,12 @@
     text-transform: capitalize;
 }
 
-.link_header,
+.link,
 .logo {
     font-size: var(--t-small);
 }
 
-.link_footer {
-    font-size: var(--t-xsmall);
-}
-
-.link_header,
-.link_footer:not(:last-child) {
+.link:not(:last-child) {
     margin-right: 7rem;
 }
 
