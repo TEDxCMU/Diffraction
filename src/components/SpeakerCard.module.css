@@ -1,66 +1,107 @@
 .container {
-	background: rgba(0, 0, 0, 0.6);
-	grid-column: span 4;
-	margin: 1em;
-	height: 400px;
-	position: relative;
-	border-radius: 6px;
-	border-color: white;
-	border-width: 1px;
-	border-style: solid;
+    background: rgba(0, 0, 0, 0.6);
+    grid-column: span 4;
+    margin: 1em;
+    height: 425px;
+    position: relative;
+    border-radius: 6px;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .name {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 28px;
-	margin: 20px;
+    font-family: Bugrino, Inter, "Helvetica Neue";
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 20px;
 }
 
 .caption {
-	/* position: absolute;
+    /* position: absolute;
 	left: 7.3%;
 	top: 75%;
 	bottom: 12.95%; */
 
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 12px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
 }
 
 .title {
-	display: block;
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-	margin: 15px 20px;
+    display: block;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 15px 20px;
+    color: #7f7f7f;
 }
 
 .image {
-	width: 100%;
-	height: 65%;
-	object-fit: cover;
-}
-
-@media (max-width: 844px) {
-	.container {
-		grid-column: span 12;
-	}
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
 }
 
 .info {
-	height: 30%;
-	border-top: 1px solid white;
-	padding: 20px;
+    height: 30%;
+    border-top: 1px solid white;
+    padding: 20px;
 }
 
 .number {
-	font-size: 40px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	margin: 20px;
+    font-size: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.modalImage {
+    padding: 5rem 4rem;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.left {
+    padding: 7rem 6rem;
+    width: 55rem;
+    border-right: 1px solid var(--c-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.body {
+    font-size: var(--t-xsmall);
+}
+
+.header {
+    font-size: var(--t-large);
+    padding-bottom: 20px;
+}
+
+.icon {
+    margin-right: 1rem;
+}
+
+.modal {
+    padding: 0;
+}
+
+@media (max-width: 844px) {
+    .container {
+        grid-column: span 12;
+    }
+    .modalImage {
+        justify-content: center;
+        min-width: 100%;
+    }
 }
