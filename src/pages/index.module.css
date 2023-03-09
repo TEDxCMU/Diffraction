@@ -1,22 +1,22 @@
-.container {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: span 12;
-}
+/* .container {
+    height: 100vh;
+    overflow: hidden;
+} */
 
 .headerContainer {
-    height: 100vh;
+    /* height: 100vh; */
     top: 0;
     grid-column: span 12;
 }
 
 .eventInfo {
-    width: calc(100vw - (var(--grid-margin) * 2));
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    left: var(--grid-margin);
+    right: var(--grid-margin);
 }
 
 .talks {
