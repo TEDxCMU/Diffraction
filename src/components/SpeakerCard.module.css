@@ -101,7 +101,9 @@
         grid-column: span 12;
     }
     .modalImage {
-        justify-content: center;
-        min-width: 100%;
+        display: none;
+    }
+    .left {
+        width: auto;
     }
 }
