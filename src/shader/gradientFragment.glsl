@@ -3,6 +3,7 @@ precision mediump float;
 uniform vec3 uColor1;
 uniform vec3 uColor2;
 uniform vec3 uColor3;
+uniform vec3 uColor4;
 
 uniform float uTime;
 
@@ -15,6 +16,7 @@ uniform float uNoiseAmp;
 uniform float uNoiseSpeed;
 uniform float uOffset1;
 uniform float uOffset2;
+uniform float uOffset3;
 uniform float uSmoothstepMin;
 uniform float uSmoothstepMax;
 uniform float uDistRadius;
@@ -47,6 +49,7 @@ void main() {
   float n = smoothstep(uSmoothstepMin, uSmoothstepMax, snoise3(noisePos)) * uNoiseAmp;
   float m = smoothstep(uSmoothstepMin, uSmoothstepMax, snoise3(noisePos + uOffset1)) * uNoiseAmp;
   float l = smoothstep(uSmoothstepMin, uSmoothstepMax, snoise3(noisePos + uOffset2)) * uNoiseAmp;
+  float k = smoothstep(uSmoothstepMin, uSmoothstepMax, snoise3(noisePos + uOffset3)) * uNoiseAmp;
 
   vec2 direction = normalize(vPosition.xy - uMouse.xy);
   float dist = length(vPosition - uMouse);
@@ -57,7 +60,9 @@ void main() {
   // vec3 mix2 = overlay(mix1, uColor3);
   // gl_FragColor = vec4(mix1, 1.);
 
+  // vec3 mixColor = uColor1 * n + uColor2 * m + uColor3 * l + uColor4 * k;
   vec3 mixColor = uColor1 * n + uColor2 * m + uColor3 * l;
+
   // if (mixColor.x > 0.9) mixColor.x = 1. - (1. - uColor1.x) / 2.;
   // if (mixColor.y > 0.9) mixColor.y = 1. - (1. - uColor1.y) / 2.;
   // if (mixColor.z > 0.9) mixColor.z = 1. - (1. - uColor1.z) / 2.;
