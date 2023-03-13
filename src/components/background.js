@@ -132,10 +132,10 @@ const Scene = (props) => {
       <GradientEffect />
       {props.home ? <Droplet /> : null}
 
-      {/* <EffectComposer > 
+      <EffectComposer > 
         <HueSaturation saturation={0.5}/>
         <Bloom />
-      </EffectComposer> */}
+      </EffectComposer>
     </>
   );
 }
