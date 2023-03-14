@@ -18,12 +18,14 @@ const GradientMaterial = shaderMaterial(
     uColor1: new THREE.Color(0xff813a),
     uColor2: new THREE.Color(0xdf43ff),
     uColor3: new THREE.Color(0x426bff),
+    uColor4: new THREE.Color(0xEAFBA1),
     uMouse: new THREE.Vector3(0.0, 0.0, 0.0),
     uNoiseFreq: 15,
     uNoiseAmp: 0.5,
     uNoiseSpeed: 0.03,
     uOffset1: 0.03,
     uOffset2: 0.17,
+    uOffset3: 0.05,
     uSmoothstepMin: 0.1,
     uSmoothstepMax: 0.5,
     uDistRadius: 0.1,
@@ -50,35 +52,35 @@ const GradientEffect = (props) => {
   });
 
   // comment this for final version
-  const { uColor1,
-    uColor2,
-    uColor3,
-    uNoiseFreq,
-    uNoiseAmp,
-    uNoiseSpeed,
-    uOffset1,
-    uOffset2,
-    uSmoothstepMin,
-    uSmoothstepMax,
-    uDistRadius,
-    uSeed } = useControls({ uColor1: '#ff813a',
-                            uColor2: '#df43ff',
-                            uColor3: '#426bff',
-                            uNoiseFreq: 15,
-                            uNoiseAmp: 0.5,
-                            uNoiseSpeed: 0.03,
-                            uOffset1: 0.03,
-                            uOffset2: 0.17,
-                            uSmoothstepMin: 0.1,
-                            uSmoothstepMax: 0.5,
-                            uDistRadius: 0.1,
-                            uSeed: MathUtils.randFloat(0, 10000) })
+  // const { uColor1,
+  //   uColor2,
+  //   uColor3,
+  //   uNoiseFreq,
+  //   uNoiseAmp,
+  //   uNoiseSpeed,
+  //   uOffset1,
+  //   uOffset2,
+  //   uSmoothstepMin,
+  //   uSmoothstepMax,
+  //   uDistRadius,
+  //   uSeed } = useControls({ uColor1: '#ff813a',
+  //                           uColor2: '#df43ff',
+  //                           uColor3: '#426bff',
+  //                           uNoiseFreq: 15,
+  //                           uNoiseAmp: 0.5,
+  //                           uNoiseSpeed: 0.03,
+  //                           uOffset1: 0.03,
+  //                           uOffset2: 0.17,
+  //                           uSmoothstepMin: 0.1,
+  //                           uSmoothstepMax: 0.5,
+  //                           uDistRadius: 0.1,
+  //                           uSeed: MathUtils.randFloat(0, 10000) })
 
   return (
     <mesh>
       <sphereGeometry args={[1.5, 64, 32]}/>
       {/* also replace this w below for final version */}
-      <gradientMaterial uColor1={uColor1}
+      {/* <gradientMaterial uColor1={uColor1}
                         uColor2={uColor2}
                         uColor3={uColor3}
                         uNoiseFreq={uNoiseFreq}
@@ -92,9 +94,9 @@ const GradientEffect = (props) => {
                         uSeed={uSeed}
                         ref={ref} 
                         side={THREE.DoubleSide}
-                         />
-      {/* <gradientMaterial ref={ref} 
-                        side={THREE.DoubleSide} />  */}
+                         /> */}
+      <gradientMaterial ref={ref} 
+                        side={THREE.DoubleSide} /> 
     </mesh>
   );
 }
@@ -103,7 +105,7 @@ const Droplet = () => {
 
   const { viewport } = useThree();
   const dropletRef = useRef();
-  const { scale } = useControls({ scale: 0.07 })
+  // const { scale } = useControls({ scale: 0.07 })
 
   useFrame(({ mouse }) => {
     const mouseX = (mouse.x * viewport.width) / 2
@@ -119,7 +121,7 @@ const Droplet = () => {
   });
 
   return (
-    <mesh position={dropletRef.mouse} ref={dropletRef} scale={scale}>
+    <mesh position={dropletRef.mouse} ref={dropletRef} scale={0.15}>
         <sphereGeometry args={[1, 32, 32]}/>
         <meshPhysicalMaterial roughness={0} transmission={1} thickness={20} />
     </mesh>
@@ -132,10 +134,10 @@ const Scene = (props) => {
       <GradientEffect />
       {props.home ? <Droplet /> : null}
 
-      {/* <EffectComposer > 
+      <EffectComposer > 
         <HueSaturation saturation={0.5}/>
         <Bloom />
-      </EffectComposer> */}
+      </EffectComposer>
     </>
   );
 }
