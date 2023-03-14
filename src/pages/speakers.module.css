@@ -18,7 +18,7 @@
 @media (max-width: 844px) {
     .grid {
         margin: 0;
-        padding: 20px;
+        min-width: auto;
     }
 }
 
