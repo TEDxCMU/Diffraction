@@ -6,8 +6,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 36px;
+    padding: 3rem 0px;
     font-family: Inter, "Helvetica Neue";
+    z-index: 3;
+    position: relative;
 }
 
 .logo {
@@ -33,7 +35,6 @@
 }
 
 .btn {
-    background-color: var(--c-black);
     color: var(--c-white);
     border-radius: 6px;
     font-weight: bold;
@@ -45,6 +46,14 @@
 .btn:hover {
     background-color: var(--c-white);
     color: var(--c-black);
+}
+
+.exponav {
+    /* background: url('../assets/expo_bg.svg'); */
+    background-size: cover;
+
+    /* Workaround for some mobile browsers */
+    min-height: 100%;
 }
 
 @media screen and (max-width: 812px) {
