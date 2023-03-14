@@ -71,11 +71,14 @@
 
 .left {
     padding: 7rem 6rem;
-    width: 55rem;
+    width: 450px;
     border-right: 1px solid var(--c-border);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+.right {
+    width: 400px;
 }
 
 .body {

@@ -13,7 +13,17 @@ export default function SpeakerCard(props) {
                 className={styles.container}
                 onClick={() => setOpenModal(true)}
             >
-                <img className={styles.image} src={speaker.image.url}></img>
+                <img
+                    className={styles.image}
+                    src={speaker.image.url}
+                    style={
+                        speaker.name === "Simone Polanen"
+                            ? {
+                                  objectPosition: "center 20%",
+                              }
+                            : {}
+                    }
+                />
                 <div className={styles.info}>
                     <h1 className={styles.name}>{speaker.name}</h1>
                     <h2 className={styles.title}>{speaker.title}</h2>
