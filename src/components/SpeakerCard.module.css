@@ -64,9 +64,8 @@
 }
 
 .modalImage {
-    padding: 5rem 4rem;
-    width: 400px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -100,7 +99,8 @@
     .container {
         grid-column: span 12;
     }
-    .modalImage {
+    .modalImage,
+    .right {
         display: none;
     }
     .left {

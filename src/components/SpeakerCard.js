@@ -27,11 +27,13 @@ export default function SpeakerCard(props) {
                     </h1>
                     <p className={styles.body}>{speaker.description}</p>
                 </div>
-                <img
-                    className={styles.modalImage}
-                    src={speaker.image.url}
-                    alt={speaker.name}
-                />
+                <div className={styles.right}>
+                    <img
+                        className={styles.modalImage}
+                        src={speaker.image.url}
+                        alt={speaker.name}
+                    />
+                </div>
             </Modal>
         </>
     );

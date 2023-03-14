@@ -35,7 +35,6 @@
 }
 
 .btn {
-    background-color: var(--c-black);
     color: var(--c-white);
     border-radius: 6px;
     font-weight: bold;
