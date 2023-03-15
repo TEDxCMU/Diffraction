@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 @font-face {
-  font-family: 'Bugrino';
-  src: url('../assets/fonts/Bugrino-Regular.otf'),
-    url('../assets/fonts/Bugrino-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Bugrino";
+    src: url("/fonts/Bugrino-Regular.otf"),
+        url("/fonts/Bugrino-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Void';
-  src: url('../assets/fonts/Void-Regular.woff2') format('woff2'),
-    url('../assets/fonts/Void-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Void";
+    src: url("/fonts/Void-Regular.woff2") format("woff2"),
+        url("/fonts/Void-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Satoshi';
-  src: url('../assets/fonts/Satoshi-Regular.woff2') format('woff2'),
-    url('../assets/fonts/Satoshi-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi-Regular.woff2") format("woff2"),
+        url("/fonts/Satoshi-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
 }
