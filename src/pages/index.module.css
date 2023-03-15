@@ -22,3 +22,18 @@
 .talks {
     position: relative;
 }
+
+@media screen and (max-width: 768px) {
+    .eventInfo {
+        flex-direction: column;
+        bottom: 25vh;
+        left: var(--space-16x);
+    }
+    .eventInfo h1 {
+        font-size: var(--t-large);
+        padding-bottom: 3vh;
+    }
+    .eventInfo p {
+        font-size: var(--t-medium);
+    }
+}

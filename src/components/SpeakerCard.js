@@ -31,7 +31,7 @@ export default function SpeakerCard(props) {
                 ) : (
                     <Image
                         className={styles.image}
-                        style={{ objectFit: "contain", padding: "7% 0" }}
+                        style={{ objectFit: "contain", padding: "7% 5%" }}
                         src={filler}
                     />
                 )}

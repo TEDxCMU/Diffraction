@@ -94,9 +94,14 @@
 @media (max-width: 844px) {
     .container {
         grid-column: span 12;
+        height: auto;
+    }
+    .image {
+        height: 270px;
     }
     .modalImage,
-    .right {
+    .right,
+    .number {
         display: none;
     }
     .left {

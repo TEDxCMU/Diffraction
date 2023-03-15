@@ -45,6 +45,24 @@
 @media (max-width: 844px) {
     .container {
         grid-column: span 12;
+        height: auto;
+    }
+    .index,
+    .modalImage {
+        display: none;
+    }
+    .caption,
+    .name {
+        margin: 0;
+    }
+    .caption {
+        padding: 10px 0;
+    }
+    .info {
+        height: auto;
+    }
+    .header {
+        word-break: break-word;
     }
 }
 

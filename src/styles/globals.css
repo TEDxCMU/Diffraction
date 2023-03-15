@@ -109,6 +109,10 @@ a {
         text-transform: uppercase;
         font-size: var(--t-small);
     }
+
+    .grid {
+        min-width: auto;
+    }
 }
 
 .content {
