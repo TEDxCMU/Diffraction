@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { getSchedule } from "utils/content";
 import { Layout } from "components/layouts";
 
+import styles from "./schedule.module.css";
+
 function Schedule() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -57,39 +59,39 @@ function Talks(props) {
     });
 
     return !isMobile ? (
-        <div className="card">
-            <p className="about"> {props.time} </p>
-            <div className="container">
-                <div className="left">
+        <div className={styles.card}>
+            <p className={styles.about}> {props.time} </p>
+            <div className={styles.container}>
+                <div className={styles.left}>
                     <h2 className="subheading">{props.title}</h2>
-                    <p className="about">
+                    <p className={styles.about}>
                         {Object.values(props.speaker.data)[0]}
                     </p>
-                    <div className="info">
-                        <p className="about">{props.description}</p>
+                    <div className={styles.info}>
+                        <p className={styles.about}>{props.description}</p>
                     </div>
                 </div>
-                <div className="right">
+                <div className={styles.right}>
                     <img width="100%" src={props.image.url}></img>
                 </div>
             </div>
         </div>
     ) : (
-        <div className="card">
-            <div className="container">
-                <div className="top">
-                    <div className="left">
+        <div className={styles.card}>
+            <div className={styles.container}>
+                <div className={styles.top}>
+                    <div className={styles.left}>
                         <h2 className="subheading">{props.title}</h2>
-                        <p className="about">
+                        <p className={styles.about}>
                             {Object.values(props.speaker.data)[0]}
                         </p>
                     </div>
-                    <div className="right">
+                    <div className={styles.right}>
                         <p> {props.time} </p>
                     </div>
                 </div>
-                <div className="desMobile">
-                    <p className="about">{props.description}</p>
+                <div className={styles.desMobile}>
+                    <p className={styles.about}>{props.description}</p>
                 </div>
             </div>
         </div>
