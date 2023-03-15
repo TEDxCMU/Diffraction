@@ -20,17 +20,6 @@ interface EventDocumentData {
      */
     title: prismicT.KeyTextField;
     /**
-     * Description field in *Event*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.description
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-    /**
      * Speaker field in *Event*
      *
      * - **Field Type**: Link
@@ -42,17 +31,6 @@ interface EventDocumentData {
      */
     speaker: prismicT.LinkField;
     /**
-     * Time field in *Event*
-     *
-     * - **Field Type**: Date
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.time
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/date
-     *
-     */
-    time: prismicT.DateField;
-    /**
      * Image field in *Event*
      *
      * - **Field Type**: Image
@@ -63,6 +41,39 @@ interface EventDocumentData {
      *
      */
     image: prismicT.ImageField<never>;
+    /**
+     * Start Time field in *Event*
+     *
+     * - **Field Type**: Timestamp
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.start_time
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/timestamp
+     *
+     */
+    start_time: prismicT.TimestampField;
+    /**
+     * End Time field in *Event*
+     *
+     * - **Field Type**: Timestamp
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.end_time
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/timestamp
+     *
+     */
+    end_time: prismicT.TimestampField;
+    /**
+     * Description field in *Event*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description: prismicT.KeyTextField;
 }
 /**
  * Event document from Prismic

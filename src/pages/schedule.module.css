@@ -31,6 +31,11 @@
     width: 67%;
 }
 
+.full {
+    padding: 5vh 3vw;
+    width: 100%;
+}
+
 .right {
     display: flex;
     justify-content: center;

@@ -4,6 +4,13 @@ import { Layout } from "components/layouts";
 
 import styles from "./schedule.module.css";
 
+function sortByTime(a, b) {
+    console.log(new Date(b.start_time) - new Date(a.start_time));
+    // Turn your strings into dates, and then subtract them
+    // to get a value that is either negative, positive, or zero.
+    return new Date(a.start_time) - new Date(b.start_time);
+}
+
 function Schedule() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -14,7 +21,8 @@ function Schedule() {
 
     async function init() {
         const content = await getSchedule();
-        const events = content.map(({ data }) => data);
+        const events = content.map(({ data }) => data).sort(sortByTime);
+        console.log(events);
         setData(events);
         setLoading(false);
     }
@@ -26,25 +34,14 @@ function Schedule() {
                 <p> Loading</p>
             ) : (
                 data?.map((talks, idx) => {
-                    return (
-                        <Talks
-                            key={idx}
-                            title={talks.title}
-                            speaker={talks.speaker}
-                            description={
-                                Object.values(talks.description)[0].text
-                            }
-                            time={talks.time}
-                            image={talks.image}
-                        />
-                    );
+                    return <Talks key={idx} {...talks} />;
                 })
             )}
         </div>
     );
 }
 
-function Talks(props) {
+function Talks({ start_time, title, speaker, description, image }) {
     const [isMobile, setIsMobile] = useState(false);
 
     const handleResize = () => {
@@ -60,20 +57,31 @@ function Talks(props) {
 
     return !isMobile ? (
         <div className={styles.card}>
-            <p className={styles.about}> {props.time} </p>
+            <p className={styles.about}>
+                {new Date(start_time).toLocaleTimeString("en-US", {
+                    hour: "numeric",
+                    minute: "2-digit",
+                })}
+            </p>
             <div className={styles.container}>
-                <div className={styles.left}>
-                    <h2 className="subheading">{props.title}</h2>
-                    <p className={styles.about}>
-                        {Object.values(props.speaker.data)[0]}
-                    </p>
-                    <div className={styles.info}>
-                        <p className={styles.about}>{props.description}</p>
+                <div className={image?.url ? styles.left : styles.full}>
+                    <h2 className="subheading">{title}</h2>
+                    {speaker?.data && (
+                        <p className={styles.about}>
+                            {Object.values(speaker.data)[0]}
+                        </p>
+                    )}
+                    {description && (
+                        <div className={styles.info}>
+                            <p className={styles.about}>{description}</p>
+                        </div>
+                    )}
+                </div>
+                {image?.url && (
+                    <div className={styles.right}>
+                        <img width="100%" src={image.url}></img>
                     </div>
-                </div>
-                <div className={styles.right}>
-                    <img width="100%" src={props.image.url}></img>
-                </div>
+                )}
             </div>
         </div>
     ) : (
@@ -81,17 +89,17 @@ function Talks(props) {
             <div className={styles.container}>
                 <div className={styles.top}>
                     <div className={styles.left}>
-                        <h2 className="subheading">{props.title}</h2>
+                        <h2 className="subheading">{title}</h2>
                         <p className={styles.about}>
-                            {Object.values(props.speaker.data)[0]}
+                            {Object.values(speaker.data)[0]}
                         </p>
                     </div>
                     <div className={styles.right}>
-                        <p> {props.time} </p>
+                        <p> {time} </p>
                     </div>
                 </div>
                 <div className={styles.desMobile}>
-                    <p className={styles.about}>{props.description}</p>
+                    <p className={styles.about}>{description}</p>
                 </div>
             </div>
         </div>

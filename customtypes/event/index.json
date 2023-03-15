@@ -19,15 +19,6 @@
           "placeholder": ""
         }
       },
-      "description": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Description",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      },
       "speaker": {
         "type": "Link",
         "config": {
@@ -36,19 +27,33 @@
           "select": null
         }
       },
-      "time": {
-        "type": "Date",
-        "config": {
-          "label": "Time",
-          "placeholder": ""
-        }
-      },
       "image": {
         "type": "Image",
         "config": {
           "label": "Image",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "start_time": {
+        "type": "Timestamp",
+        "config": {
+          "label": "Start Time",
+          "placeholder": ""
+        }
+      },
+      "end_time": {
+        "type": "Timestamp",
+        "config": {
+          "label": "End Time",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
         }
       }
     }
