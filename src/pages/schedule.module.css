@@ -27,16 +27,17 @@
 }
 
 .left {
-    padding: 3% 0 10% 5%;
-    width: 66%;
+    padding: 5vh 3vw;
+    width: 67%;
 }
 
 .right {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3%;
+    padding: 5%;
     width: 33%;
+    border-left: 1px solid white;
 }
 
 .description {

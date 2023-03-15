@@ -79,6 +79,7 @@ a {
 }
 
 .subheading {
+    font-family: Bugrino, Inter, "Helvetica Neue";
     font-weight: bold;
     text-transform: uppercase;
     font-size: var(--t-medium-large);

@@ -11,9 +11,6 @@ function Home() {
                     <p className="heading medium-large">March 25, 4 pm EST</p>
                 </div>
             </div>
-            {/* <div className={styles.talks}>
-                <p className="subheading">TALKS</p>
-            </div> */}
         </div>
     );
 }
