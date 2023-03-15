@@ -32,11 +32,17 @@
     margin-right: 2rem;
     padding: 1.5rem 3.5rem;
     font-size: 1.2rem;
-    border: 0.1rem solid var(--c-white);
     border-radius: 2.5rem;
     color: var(--c-white);
+    border: 0.1rem solid var(--c-white);
 }
 
 .icon {
     margin-right: 1rem;
+}
+
+@media screen and (max-width: 812px) {
+    .img {
+        display: none;
+    }
 }

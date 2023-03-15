@@ -1,7 +1,9 @@
-import {useState} from "react";
-import styles from 'components/InnovatorCard.module.css';
+import { useState } from "react";
+import styles from "components/InnovatorCard.module.css";
 import Modal from "./modal";
 import cn from "classnames";
+
+import Filler from "../assets/filler1.svg";
 
 export default function InnovatorCard(props) {
     const { innovator, idx } = props;
@@ -15,8 +17,10 @@ export default function InnovatorCard(props) {
                 <img className={styles.image} src={innovator.image.url}></img>
                 <div className={styles.info}>
                     <text className={styles.name}>{innovator.name}</text>
-                    <text className={styles.caption}>{innovator.description}</text>
-                    <text className={styles.index}>0{idx+1}</text>
+                    <text className={styles.caption}>
+                        {innovator.description}
+                    </text>
+                    <text className={styles.index}>0{idx + 1}</text>
                 </div>
             </div>
             <Modal large active={openModal} setActive={setOpenModal}>
@@ -34,5 +38,4 @@ export default function InnovatorCard(props) {
             </Modal>
         </>
     );
-
 }
