@@ -18,7 +18,7 @@ export default function InnovatorCard(props) {
                 <div className={styles.info}>
                     <text className={styles.name}>{innovator.name}</text>
                     <text className={styles.caption}>
-                        {innovator.description}
+                        {innovator.description.substring(0, 115) + "..."}
                     </text>
                     <text className={styles.index}>0{idx + 1}</text>
                 </div>
@@ -30,11 +30,13 @@ export default function InnovatorCard(props) {
                     </h1>
                     <p className={styles.body}>{innovator.description}</p>
                 </div>
-                <img
-                    className={styles.modalImage}
-                    src={innovator.image.url}
-                    alt={innovator.name}
-                />
+                <div className={styles.right}>
+                    <img
+                        className={styles.modalImage}
+                        src={innovator.image.url}
+                        alt={innovator.name}
+                    />
+                </div>
             </Modal>
         </>
     );

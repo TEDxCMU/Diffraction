@@ -48,7 +48,7 @@ function NavBar() {
                     <a
                         target="_blank"
                         className={cn(styles.link, styles.btn)}
-                        href="https://carnegiemellontickets.universitytickets.com"
+                        href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2337&p=1"
                     >
                         Purchase Tickets
                     </a>

@@ -22,12 +22,6 @@
 }
 
 .caption {
-    /* position: absolute;
-	left: 7.3%;
-	top: 75%;
-	bottom: 12.95%; */
-
-    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -35,12 +29,11 @@
 
 .title {
     display: block;
-    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     margin: 15px 20px;
-    color: #7f7f7f;
+    color: var(--c-gray-4);
 }
 
 .image {

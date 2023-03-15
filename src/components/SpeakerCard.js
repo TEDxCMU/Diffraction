@@ -2,6 +2,9 @@ import styles from "components/SpeakerCard.module.css";
 import { useState } from "react";
 import Modal from "./modal";
 import cn from "classnames";
+import Image from "next/image";
+
+import filler from "../assets/filler1.png";
 
 export default function SpeakerCard(props) {
     const { speaker } = props;
@@ -13,17 +16,25 @@ export default function SpeakerCard(props) {
                 className={styles.container}
                 onClick={() => setOpenModal(true)}
             >
-                <img
-                    className={styles.image}
-                    src={speaker.image.url}
-                    style={
-                        speaker.name === "Simone Polanen"
-                            ? {
-                                  objectPosition: "center 20%",
-                              }
-                            : {}
-                    }
-                />
+                {speaker.image.url ? (
+                    <img
+                        className={styles.image}
+                        src={speaker.image.url}
+                        style={
+                            speaker.name === "Simone Polanen"
+                                ? {
+                                      objectPosition: "center 20%",
+                                  }
+                                : {}
+                        }
+                    />
+                ) : (
+                    <Image
+                        className={styles.image}
+                        style={{ objectFit: "contain", padding: "7% 0" }}
+                        src={filler}
+                    />
+                )}
                 <div className={styles.info}>
                     <h1 className={styles.name}>{speaker.name}</h1>
                     <h2 className={styles.title}>{speaker.title}</h2>
@@ -40,7 +51,7 @@ export default function SpeakerCard(props) {
                 <div className={styles.right}>
                     <img
                         className={styles.modalImage}
-                        src={speaker.image.url}
+                        src={speaker.image.url ?? filler}
                         alt={speaker.name}
                     />
                 </div>
