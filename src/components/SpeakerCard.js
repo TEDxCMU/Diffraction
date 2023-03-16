@@ -21,7 +21,8 @@ export default function SpeakerCard(props) {
                         className={styles.image}
                         src={speaker.image.url}
                         style={
-                            speaker.name === "Simone Polanen"
+                            speaker.name === "Simone Polanen" ||
+                            speaker.name === "Zaria Parvez"
                                 ? {
                                       objectPosition: "center 20%",
                                   }

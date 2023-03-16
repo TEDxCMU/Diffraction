@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import styles from "components/navbar.module.css";
 import cn from "classnames";
@@ -10,24 +10,15 @@ function NavBar() {
     const parentRef = useRef(null);
     const itemsRef = useRef(null);
     const [about, setAbout] = useState(false);
-
-    const [isMobile, setIsMobile] = useState(false);
-
-    const handleResize = () => {
-        if (window.innerWidth < 812) {
-            setIsMobile(true);
-        } else {
-            setIsMobile(false);
-        }
-    };
-    useEffect(() => {
-        window.addEventListener("resize", handleResize);
-    });
+    const [active, setActive] = useState(false);
 
     return (
         <>
             <About active={about} setActive={setAbout} />
-            <nav ref={parentRef} className={styles.container}>
+            <nav
+                ref={parentRef}
+                className={active ? styles.navContainer : styles.container}
+            >
                 <Link legacyBehavior href="/">
                     <p className={styles.logo}>TEDxCMU</p>
                 </Link>
@@ -53,7 +44,12 @@ function NavBar() {
                         Purchase Tickets
                     </a>
                 </div>
-                <Menu parent={parentRef} items={itemsRef} />
+                <Menu
+                    parent={parentRef}
+                    items={itemsRef}
+                    active={active}
+                    setActive={setActive}
+                />
             </nav>
         </>
     );

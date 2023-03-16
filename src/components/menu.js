@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from 'components/menu.module.css';
 
-function Menu({ parent, items }) {
-    const [active, setActive] = useState(false);
+function Menu({ parent, items, active, setActive }) {
     const router = useRouter();
 
     function handleClick() {

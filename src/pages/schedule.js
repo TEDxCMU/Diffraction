@@ -90,9 +90,11 @@ function Talks({ start_time, title, speaker, description, image }) {
                 <div className={styles.top}>
                     <div className={styles.left}>
                         <h2 className="subheading">{title}</h2>
-                        <p className={styles.about}>
-                            {Object.values(speaker.data)[0]}
-                        </p>
+                        {speaker?.data && (
+                            <p className={styles.about}>
+                                {Object.values(speaker.data)[0]}
+                            </p>
+                        )}
                     </div>
                     <div className={styles.right}>
                         <p> {time} </p>
