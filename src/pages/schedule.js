@@ -55,14 +55,14 @@ function Talks({ start_time, title, speaker, description, image }) {
         window.addEventListener("resize", handleResize);
     });
 
+    const time = new Date(start_time).toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+    });
+
     return !isMobile ? (
         <div className={styles.card}>
-            <p className={styles.about}>
-                {new Date(start_time).toLocaleTimeString("en-US", {
-                    hour: "numeric",
-                    minute: "2-digit",
-                })}
-            </p>
+            <p className={styles.about}>{time}</p>
             <div className={styles.container}>
                 <div className={image?.url ? styles.left : styles.full}>
                     <h2 className="subheading titleCase">{title}</h2>
