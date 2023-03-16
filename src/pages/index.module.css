@@ -26,12 +26,13 @@
 @media screen and (max-width: 768px) {
     .eventInfo {
         flex-direction: column;
-        bottom: 25vh;
-        left: var(--space-16x);
+        bottom: 10vh;
+        left: var(--space-12x);
     }
     .eventInfo h1 {
-        font-size: var(--t-large);
-        padding-bottom: 3vh;
+        font-size: 78px;
+        padding-bottom: 0vh;
+        line-height: 0.9;
     }
     .eventInfo p {
         font-size: var(--t-medium);

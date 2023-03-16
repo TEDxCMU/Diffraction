@@ -9,7 +9,7 @@
 
 .header {
     font-family: Void, Bugrino, Inter, "Helvetica Neue";
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: var(--t-title);
 }
 

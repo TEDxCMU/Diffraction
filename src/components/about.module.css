@@ -14,10 +14,12 @@
 
 .body {
     font-size: var(--t-xsmall);
+    color: var(--c-off-white);
 }
 
 .header {
     font-size: var(--t-large);
+    padding-bottom: 2vh;
 }
 
 .links {
@@ -39,6 +41,11 @@
 
 .icon {
     margin-right: 1rem;
+}
+
+.bugrino {
+    font-size: 28px;
+    font-family: Bugrino, Inter, "Helvetica Neue";
 }
 
 @media screen and (max-width: 812px) {

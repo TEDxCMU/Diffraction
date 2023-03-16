@@ -65,7 +65,7 @@ function Talks({ start_time, title, speaker, description, image }) {
             </p>
             <div className={styles.container}>
                 <div className={image?.url ? styles.left : styles.full}>
-                    <h2 className="subheading">{title}</h2>
+                    <h2 className="subheading titleCase">{title}</h2>
                     {speaker?.data && (
                         <p className={styles.about}>
                             {Object.values(speaker.data)[0]}

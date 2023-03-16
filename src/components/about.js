@@ -11,7 +11,8 @@ export default function About({ active, setActive }) {
         <Modal active={active} setActive={setActive} large>
             <div className={styles.left}>
                 <h1 className={cn("title", styles.header)}>
-                    About TEDxCMU: Diffraction
+                    <span className={styles.bugrino}>About TEDxCMU: </span>
+                    Diffraction
                 </h1>
                 <p className={styles.body}>
                     Diffraction is the process by which a source of light,

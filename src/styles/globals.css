@@ -64,10 +64,6 @@ html {
     color: var(--c-white);
 }
 
-body {
-    margin: 0 2% 0 2%;
-}
-
 a {
     font-weight: inherit;
     color: inherit;
@@ -82,13 +78,13 @@ a {
 
 .title {
     font-family: Void, Bugrino, Inter, "Helvetica Neue";
-    text-transform: uppercase;
     font-size: var(--t-title);
+    text-transform: lowercase;
 }
 
 .heading {
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: var(--t-medium-large);
     font-family: Bugrino, Inter, "Helvetica Neue";
 }
@@ -96,8 +92,12 @@ a {
 .subheading {
     font-family: Bugrino, Inter, "Helvetica Neue";
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: var(--t-medium-large);
+}
+
+.titleCase {
+    text-transform: capitalize;
 }
 
 .grid {
@@ -121,8 +121,8 @@ a {
 
     .subheading {
         font-weight: bold;
-        text-transform: uppercase;
-        font-size: var(--t-small);
+        text-transform: capitalize;
+        font-size: var(--t-medium);
     }
 
     .grid {

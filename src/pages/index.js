@@ -8,7 +8,12 @@ function Home() {
                 <div className={styles.eventInfo}>
                     <h1 className="largeTitle">diffraction</h1>
                     <p className="heading medium-large">Simmons Auditorium</p>
-                    <p className="heading medium-large">March 25, 4 pm EST</p>
+                    <p
+                        className="heading medium-large"
+                        style={{ textTransform: "none" }}
+                    >
+                        March 25, 4 PM EST
+                    </p>
                 </div>
             </div>
         </div>
