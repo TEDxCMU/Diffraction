@@ -42,25 +42,12 @@ function Schedule() {
 }
 
 function Talks({ start_time, title, speaker, description, image }) {
-    const [isMobile, setIsMobile] = useState(false);
-
-    const handleResize = () => {
-        if (window.innerWidth < 812) {
-            setIsMobile(true);
-        } else {
-            setIsMobile(false);
-        }
-    };
-    useEffect(() => {
-        window.addEventListener("resize", handleResize);
-    });
-
     const time = new Date(start_time).toLocaleTimeString("en-US", {
         hour: "numeric",
         minute: "2-digit",
     });
 
-    return !isMobile ? (
+    return (
         <div className={styles.card}>
             <p className={styles.about}>{time}</p>
             <div className={styles.container}>
@@ -82,27 +69,6 @@ function Talks({ start_time, title, speaker, description, image }) {
                         <img width="100%" src={image.url}></img>
                     </div>
                 )}
-            </div>
-        </div>
-    ) : (
-        <div className={styles.card}>
-            <div className={styles.container}>
-                <div className={styles.top}>
-                    <div className={styles.left}>
-                        <h2 className="subheading">{title}</h2>
-                        {speaker?.data && (
-                            <p className={styles.about}>
-                                {Object.values(speaker.data)[0]}
-                            </p>
-                        )}
-                    </div>
-                    <div className={styles.right}>
-                        <p> {time} </p>
-                    </div>
-                </div>
-                <div className={styles.desMobile}>
-                    <p className={styles.about}>{description}</p>
-                </div>
             </div>
         </div>
     );
