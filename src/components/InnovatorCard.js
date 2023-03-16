@@ -25,7 +25,15 @@ export default function InnovatorCard(props) {
             </div>
             <Modal large active={openModal} setActive={setOpenModal}>
                 <div className={styles.left}>
-                    <h1 className={cn("title", styles.header)}>
+                    <h1
+                        lang="de"
+                        className={cn(
+                            "title",
+                            styles.header,
+                            innovator.name.includes("NeuroMechatronics") &&
+                                styles.hyphen
+                        )}
+                    >
                         About {innovator.name}
                     </h1>
                     <p className={styles.body}>{innovator.description}</p>
