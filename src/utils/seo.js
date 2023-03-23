@@ -13,7 +13,7 @@ export default {
     openGraph: {
         url: "https://diffraction.tedxcmu.org",
         type: "website",
-        title: "TEDxCMU Momentum",
+        title: "TEDxCMU Diffraction",
         description: DESCRIPTION,
         images: [
             {
