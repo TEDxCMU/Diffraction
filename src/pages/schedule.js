@@ -41,7 +41,7 @@ function Schedule() {
     );
 }
 
-function Talks({ start_time, title, speaker, description, image }) {
+function Talks({ start_time, title, speaker, description, image, recording }) {
     const time = new Date(start_time).toLocaleTimeString("en-US", {
         hour: "numeric",
         minute: "2-digit",
@@ -57,12 +57,20 @@ function Talks({ start_time, title, speaker, description, image }) {
                         <p className={styles.about}>
                             {Object.values(speaker.data)[0]}
                         </p>
-                    )}
+                    )} 
                     {description && (
                         <div className={styles.info}>
                             <p className={styles.about}>{description}</p>
                         </div>
                     )}
+                    {recording.url ? (<div className={styles.links}><a
+                        className={styles.button}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={recording.url}
+                    >
+                        Watch the talk!
+                    </a></div>):<></>}
                 </div>
                 {image?.url && (
                     <div className={styles.right}>
