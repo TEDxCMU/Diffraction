@@ -55,6 +55,14 @@
           "label": "Description",
           "placeholder": ""
         }
+      },
+      "recording": {
+        "type": "Link",
+        "config": {
+          "label": "Recording",
+          "placeholder": "",
+          "select": null
+        }
       }
     }
   }

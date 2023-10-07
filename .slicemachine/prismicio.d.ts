@@ -74,6 +74,17 @@ interface EventDocumentData {
      *
      */
     description: prismicT.KeyTextField;
+    /**
+     * Recording field in *Event*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.recording
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    recording: prismicT.LinkField;
 }
 /**
  * Event document from Prismic

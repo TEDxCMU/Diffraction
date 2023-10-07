@@ -51,6 +51,23 @@
     margin-top: 5%;
 }
 
+.links {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: var(--t-large);
+}
+
+.button {
+    display: inline-block;
+    margin-right: 2rem;
+    padding: 1.5rem 3.5rem;
+    font-size: 1.2rem;
+    border-radius: 2.5rem;
+    color: var(--c-white);
+    border: 0.1rem solid var(--c-white);
+}
+
 @media screen and (max-width: 800px) {
     .about {
         font-size: var(--t-xsmall);
